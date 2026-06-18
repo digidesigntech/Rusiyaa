@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RUSIYAA — Best in Taste | Authentic Spices & Masalas</title>
+<meta name="description" content="RUSIYAA, a brand of Arul's Foods — authentic spices and masalas for every kitchen. Trusted quality, authentic products, fair pricing. Verify any pack by its batch code.">
+<link rel="icon" href="assets/images/header_logo .png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Albert+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1c0e07;          /* deep roasted clove */
+  --ink-2:#2b160b;        /* warm dark panel */
+  --chilli:#c73e1d;       /* guntur chilli */
+  --chilli-deep:#9c2c11;
+  --turmeric:#e9a13b;     /* salem turmeric */
+  --turmeric-soft:#f2c279;
+  --cream:#f4e8d2;        /* muslin cloth */
+  --paper:#efe0c3;        /* certificate paper */
+  --leaf:#6b7f4f;         /* coriander leaf */
+  --brand:#5c1f25;        /* logo badge maroon */
+  --brand-deep:#3f1318;   /* logo badge maroon, shaded */
+  --brand-gold:#c79a4b;   /* logo gold border */
+  --line:rgba(244,232,210,.16);
+  --line-dark:rgba(28,14,7,.16);
+  --disp:'Marcellus',serif;
+  --body:'Albert Sans',sans-serif;
+  --mono:'IBM Plex Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--ink);color:var(--cream);line-height:1.6;overflow-x:clip}
+::selection{background:var(--turmeric);color:var(--ink)}
+img{max-width:100%}
+a{color:inherit}
+button{font-family:inherit;cursor:pointer}
+input,select,textarea{font-family:inherit}
+:focus-visible{outline:2px solid var(--turmeric);outline-offset:3px}
+
+/* ---------- shared ---------- */
+.wrap{width:min(1180px,92vw);margin-inline:auto}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;display:flex;align-items:center;gap:.8rem}
+.eyebrow::before{content:"";width:34px;height:1px;background:currentColor;opacity:.6}
+.h-disp{font-family:var(--disp);font-weight:400;line-height:1.08;letter-spacing:.005em}
+.section{padding:7.5rem 0}
+.light{background:var(--cream);color:var(--ink)}
+.light .eyebrow{color:var(--chilli-deep)}
+.accent-i{font-style:italic;font-family:var(--disp);color:var(--turmeric)}
+.light .accent-i{color:var(--chilli)}
+.btn{display:inline-flex;align-items:center;gap:.6rem;border:none;border-radius:999px;padding:.95rem 1.7rem;font-weight:600;font-size:.95rem;letter-spacing:.02em;transition:transform .25s ease,box-shadow .25s ease,background .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-chilli{background:var(--chilli);color:#fff;box-shadow:0 10px 30px rgba(199,62,29,.35)}
+.btn-chilli:hover{background:var(--chilli-deep)}
+.btn-ghost{background:transparent;color:var(--cream);border:1px solid var(--line)}
+.light .btn-ghost{color:var(--ink);border-color:var(--line-dark)}
+.mono{font-family:var(--mono)}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:60;transition:background .35s ease,box-shadow .35s ease;padding:1.1rem 0}
+.nav.scrolled{background:rgba(28,14,7,.88);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line);padding:.7rem 0}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{text-decoration:none;display:flex;align-items:center}
+.logo img{height:66px;width:auto;display:block;transition:height .35s ease}
+.nav.scrolled .logo img{height:50px}
+.nav-links{display:flex;align-items:center;gap:1.7rem;list-style:none}
+.nav-links a{text-decoration:none;font-size:.9rem;font-weight:500;opacity:.85;transition:opacity .2s,color .2s}
+.nav-links a:hover{opacity:1;color:var(--turmeric)}
+.nav-trace{background:var(--turmeric);color:var(--ink)!important;padding:.5rem 1.1rem;border-radius:999px;font-weight:600;opacity:1!important}
+.nav-trace:hover{background:var(--turmeric-soft)}
+.nav-burger{display:none;background:none;border:1px solid var(--line);color:var(--cream);border-radius:8px;padding:.45rem .65rem;font-size:1.05rem}
+
+/* ---------- hero ---------- */
+.hero{min-height:100svh;display:flex;align-items:center;position:relative;overflow:hidden;
+  background:
+    radial-gradient(1100px 600px at 85% -10%, rgba(233,161,59,.16), transparent 60%),
+    radial-gradient(900px 700px at -10% 110%, rgba(199,62,29,.20), transparent 60%),
+    var(--ink);}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center;padding-top:5.5rem}
+.hero h1{font-size:clamp(2rem,4.1vw,3.35rem);margin:1.1rem 0 1.15rem;max-width:17ch}
+.hero p.lead{font-size:1rem;max-width:48ch;color:rgba(244,232,210,.82);font-weight:300}
+.hero-hook{margin-top:2.2rem;border-radius:22px;padding:1.7rem 1.8rem;border:1px solid rgba(28,14,7,.12);
+  background:linear-gradient(rgba(247,240,224,.55),rgba(247,240,224,.55)),url("assets/images/card backgrounf.png") center/cover no-repeat;
+  box-shadow:0 24px 60px rgba(28,14,7,.4)}
+.hero-hook label{display:block;font-family:var(--mono);font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:var(--chilli-deep);margin-bottom:.8rem}
+.trace-form{display:flex;gap:.6rem}
+.trace-form input{flex:1;background:rgba(255,252,246,.92);border:1px solid rgba(28,14,7,.16);border-radius:999px;color:var(--ink);font-family:var(--mono);font-size:.95rem;letter-spacing:.08em;padding:.9rem 1.3rem;text-transform:uppercase}
+.trace-form input::placeholder{color:rgba(28,14,7,.4);text-transform:none;letter-spacing:.02em}
+.hero-hook .hint{margin-top:.7rem;font-size:.8rem;color:rgba(28,14,7,.68)}
+.hero-hook .hint button{background:none;border:none;color:var(--chilli);font-family:var(--mono);font-size:.8rem;text-decoration:underline dotted;padding:0}
+.hero-badges{display:flex;gap:1.6rem;margin-top:2rem;flex-wrap:wrap}
+.hero-badges span{font-size:.78rem;letter-spacing:.06em;color:rgba(244,232,210,.6);display:flex;gap:.45rem;align-items:center}
+.hero-badges b{color:var(--turmeric);font-weight:600}
+
+/* mandala visual */
+.hero-art{position:relative;display:flex;justify-content:center;transform:translateY(-2.5rem)}
+.mandala{width:min(440px,80vw);aspect-ratio:1;position:relative;display:flex;align-items:center;justify-content:center}
+.mandala-base{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:.5;will-change:transform}
+.mandala-plate{position:absolute;width:72%;height:72%;object-fit:contain;border-radius:50%;
+  filter:drop-shadow(0 30px 60px rgba(28,14,7,.4));will-change:transform}
+.particle{position:absolute;border-radius:50%;pointer-events:none}
+
+/* ---------- ribbon ---------- */
+.ribbon{background:var(--chilli);color:#fff;overflow:hidden;padding:.85rem 0;border-block:1px solid rgba(0,0,0,.15)}
+.ribbon-track{display:flex;gap:3.5rem;white-space:nowrap;font-family:var(--mono);font-size:.78rem;letter-spacing:.3em;text-transform:uppercase;will-change:transform}
+.ribbon-track span{display:flex;align-items:center;gap:3.5rem}
+.ribbon-track i{font-style:normal;opacity:.65}
+
+/* ---------- about ---------- */
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:start}
+.about h2{font-size:clamp(2.1rem,3.8vw,3.3rem);margin-top:1.2rem}
+.about .body-col p{margin-bottom:1.2rem;color:rgba(28,14,7,.78);font-weight:300;font-size:1.03rem}
+.about .body-col p b{font-weight:600;color:var(--ink)}
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-dark);border:1px solid var(--line-dark);border-radius:18px;overflow:hidden;margin-top:2.4rem}
+.stat{background:var(--cream);padding:1.5rem 1.2rem;text-align:center}
+.stat .num{font-family:var(--disp);font-size:2.3rem;color:var(--chilli-deep);line-height:1}
+.stat small{display:block;margin-top:.45rem;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(28,14,7,.55)}
+
+/* ---------- process (pinned story deck) ---------- */
+.process{position:relative;background:var(--brand-deep)}
+.process .eyebrow{color:var(--turmeric)}
+
+.story{min-height:clamp(600px,82vh,840px);display:flex;align-items:center;position:relative;overflow:hidden;isolation:isolate;
+  background:
+    radial-gradient(1100px 680px at 50% 50%, rgba(92,31,37,.55), rgba(92,31,37,0) 60%),
+    radial-gradient(820px 560px at 8% 110%, rgba(199,62,29,.16), rgba(199,62,29,0) 58%),
+    var(--brand-deep);}
+.story::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:url("assets/images/body_background.jpg") center/cover no-repeat;opacity:.28;
+  -webkit-mask:radial-gradient(160% 120% at 50% 50%, transparent 38%, #000 100%);
+          mask:radial-gradient(160% 120% at 50% 50%, transparent 38%, #000 100%);}
+.story-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(2rem,5vw,5rem);align-items:center;width:min(1180px,92vw);margin-inline:auto;padding:6rem 0}
+
+/* left context column */
+.story-aside h2{font-family:var(--disp);font-weight:400;line-height:1.08;font-size:clamp(2rem,3.4vw,3rem);margin:1.2rem 0 .4rem;color:var(--cream)}
+.story-aside .rule{width:62px;height:2px;margin:1.3rem 0 2rem;background:linear-gradient(90deg,var(--brand-gold),transparent)}
+.story-rail{display:flex;flex-direction:column;gap:.2rem;border-left:1px solid rgba(199,154,75,.25)}
+.story-rail button{display:flex;align-items:baseline;gap:.9rem;background:none;border:none;text-align:left;
+  padding:.7rem 0 .7rem 1.2rem;margin-left:-1px;border-left:2px solid transparent;color:rgba(244,232,210,.45);
+  font-family:var(--body);font-size:1.02rem;transition:color .35s ease,border-color .35s ease}
+.story-rail button i{font-family:var(--mono);font-style:normal;font-size:.78rem;letter-spacing:.1em;opacity:.7}
+.story-rail button.active{color:var(--cream);border-left-color:var(--turmeric)}
+.story-rail button.active i{color:var(--turmeric);opacity:1}
+
+/* right card stage */
+.story-stage{position:relative;display:flex;flex-direction:column;gap:1.6rem;min-height:380px}
+.scard{position:relative;overflow:hidden;border-radius:20px;padding:2.8rem 2.6rem;
+  border:1px solid rgba(199,154,75,.55);
+  background:linear-gradient(158deg,rgba(63,19,24,.94),rgba(43,22,11,.9));
+  box-shadow:0 34px 70px rgba(0,0,0,.5);}
+.scard::before{content:"";position:absolute;inset:13px;border:1px solid rgba(199,154,75,.28);border-radius:12px;pointer-events:none}
+.scard::after{content:"";position:absolute;left:0;top:0;width:100%;height:3px;background:linear-gradient(90deg,var(--turmeric),var(--chilli),transparent)}
+.scard .p-no{position:absolute;top:1.2rem;right:1.8rem;font-family:var(--disp);font-size:4.8rem;line-height:1;color:rgba(199,154,75,.16)}
+.scard .step{font-family:var(--mono);color:var(--turmeric);font-size:.74rem;letter-spacing:.3em}
+.scard h3{font-family:var(--disp);font-size:clamp(1.6rem,2.4vw,2.1rem);margin:1rem 0 .4rem;color:var(--cream)}
+.scard h3::after{content:"";display:block;width:46px;height:1px;background:rgba(199,154,75,.6);margin-top:.9rem}
+.scard p{color:rgba(244,232,210,.78);font-weight:300;max-width:42ch;margin-top:1rem}
+.scard .glyph{position:absolute;right:-14px;bottom:-22px;font-size:6.5rem;opacity:.16;filter:saturate(.85)}
+
+/* animated mode: cards stack and swap one after another (added by JS) */
+.story.anim .story-stage{display:block;position:relative;height:clamp(400px,56vh,560px)}
+.story.anim .scard{position:absolute;inset:0;margin:0;display:flex;flex-direction:column;justify-content:center}
+
+@media(max-width:860px){
+  .story-grid{grid-template-columns:1fr;gap:2.2rem}
+  .story.anim .story-stage{height:auto;min-height:420px}
+}
+
+/* ---------- products ---------- */
+.products h2{font-size:clamp(2.1rem,3.8vw,3.3rem);margin-top:1.2rem}
+.products .top{display:flex;justify-content:space-between;align-items:end;gap:2rem;flex-wrap:wrap;margin-bottom:3rem}
+.products .top p{max-width:44ch;color:rgba(28,14,7,.7);font-weight:300}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(265px,1fr));gap:1.8rem}
+.card{position:relative;background:#fffdf8;border:1px solid rgba(28,14,7,.1);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(28,14,7,.05);transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s ease,border-color .45s ease}
+.card:hover{transform:translateY(-8px);box-shadow:0 30px 60px -12px rgba(28,14,7,.22);border-color:rgba(199,154,75,.55)}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;z-index:3;background:linear-gradient(90deg,var(--brand-gold),var(--turmeric),var(--chilli));transform:scaleX(0);transform-origin:left;transition:transform .55s cubic-bezier(.2,.8,.2,1)}
+.card:hover::before{transform:scaleX(1)}
+.pack{height:235px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;border-bottom:1px solid rgba(28,14,7,.07);
+  background:radial-gradient(125% 100% at 50% 0%,#fbf5e8 0%,#f4e7cf 58%,#ecdcbc 100%)}
+.pack::after{content:"";position:absolute;left:50%;bottom:20px;width:62%;height:20px;transform:translateX(-50%);background:radial-gradient(50% 50% at 50% 50%,rgba(28,14,7,.28),transparent 72%);filter:blur(3px);pointer-events:none;z-index:0;transition:width .55s ease,opacity .55s ease}
+.card:hover .pack::after{width:54%;opacity:.85}
+.pack .pimg{position:relative;z-index:1;width:auto;height:90%;max-width:92%;object-fit:contain;mix-blend-mode:multiply;transition:transform .55s cubic-bezier(.2,.8,.2,1)}
+.card:hover .pack .pimg{transform:scale(1.05) translateY(-4px)}
+.pack .ptag{position:absolute;top:.9rem;left:.9rem;z-index:2;font-family:var(--mono);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brand-deep);background:rgba(255,253,248,.82);-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);border:1px solid rgba(199,154,75,.55);padding:.34rem .72rem;border-radius:999px}
+.pack .pglyph{position:relative;z-index:1;font-size:3.6rem;filter:drop-shadow(0 10px 16px rgba(28,14,7,.3))}
+.card-body{padding:1.35rem 1.4rem 1.45rem;display:flex;flex-direction:column;gap:.55rem;flex:1}
+.card-body h3{font-family:var(--disp);font-size:1.34rem;color:var(--ink);letter-spacing:.01em;line-height:1.15}
+.card-body p{font-size:.85rem;color:rgba(28,14,7,.6);flex:1;line-height:1.6}
+.card-meta{display:flex;justify-content:space-between;align-items:center;margin-top:.7rem;padding-top:.9rem;border-top:1px solid rgba(28,14,7,.1)}
+.price{font-family:var(--mono);font-weight:600;font-size:.82rem;color:var(--ink);letter-spacing:.02em}
+.heat{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(28,14,7,.5)}
+.heat .on{color:var(--chilli)}
+
+/* ---------- quality ---------- */
+.quality{position:relative;color:var(--cream);
+  background:
+    radial-gradient(900px 520px at 82% -8%, rgba(199,62,29,.16), rgba(199,62,29,0) 60%),
+    radial-gradient(760px 560px at -6% 112%, rgba(233,161,59,.10), rgba(233,161,59,0) 60%),
+    var(--ink);}
+.quality h2{font-size:clamp(2.1rem,3.8vw,3.3rem);margin-top:1.2rem;max-width:20ch;color:var(--cream)}
+.q-grid{display:grid;grid-template-columns:64px 1fr;gap:0 2.2rem;margin-top:3.5rem}
+.q-linecol{position:relative}
+.q-linecol svg{position:absolute;top:0;left:50%;transform:translateX(-50%);height:100%}
+.q-steps{display:flex;flex-direction:column;gap:3.4rem}
+.q-step{max-width:60ch;position:relative}
+.q-step h3{font-family:var(--disp);font-size:1.5rem;margin-bottom:.45rem;display:flex;gap:.8rem;align-items:baseline}
+.q-step h3 .tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.24em;color:var(--turmeric)}
+.q-step p{color:rgba(244,232,210,.72);font-weight:300}
+.q-counters{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:4.5rem}
+.q-counter{border:1px solid var(--line);border-radius:18px;padding:1.8rem 1.4rem;text-align:center;background:rgba(244,232,210,.03)}
+.q-counter .num{font-family:var(--disp);font-size:2.7rem;color:var(--turmeric);line-height:1}
+.q-counter small{display:block;margin-top:.55rem;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,232,210,.55)}
+.qr-note{margin-top:4rem;border:1px dashed rgba(233,161,59,.45);border-radius:20px;padding:1.8rem 2rem;display:flex;gap:1.6rem;align-items:center;flex-wrap:wrap;background:rgba(233,161,59,.05)}
+.qr-box{width:84px;height:84px;border-radius:12px;background:
+  conic-gradient(var(--cream) 25%, transparent 0 50%, var(--cream) 0 75%, transparent 0) 0 0/22px 22px,
+  var(--ink-2);border:6px solid var(--cream);flex:0 0 auto}
+.qr-note p{max-width:52ch;color:rgba(244,232,210,.8);font-size:.95rem}
+.qr-note .mono{color:var(--turmeric)}
+
+/* ---------- contact ---------- */
+.contact .wrap{display:grid;grid-template-columns:1fr 1.02fr;gap:clamp(2rem,5vw,4.5rem);align-items:start}
+.contact h2{font-size:clamp(2.1rem,3.8vw,3.3rem);margin-top:1.2rem}
+.contact-lead{color:rgba(28,14,7,.72);font-weight:300;margin:1.1rem 0 2rem;max-width:46ch}
+
+/* contact cards */
+.contact-cards{display:flex;flex-direction:column;gap:.85rem}
+.ccard{display:flex;gap:1rem;align-items:flex-start;text-decoration:none;color:var(--ink);
+  background:rgba(255,255,255,.5);border:1px solid var(--line-dark);border-radius:16px;
+  padding:1rem 1.15rem;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease,background .3s ease}
+a.ccard:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(28,14,7,.12);border-color:rgba(199,62,29,.4);background:#fff}
+.ccard-ic{flex:0 0 auto;width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:1.2rem;
+  background:linear-gradient(150deg,rgba(233,161,59,.22),rgba(199,62,29,.14));border:1px solid rgba(199,62,29,.18)}
+.ccard-tx{display:flex;flex-direction:column;gap:.18rem;min-width:0}
+.ccard-tx small{font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--chilli-deep)}
+.ccard-tx b{font-weight:600;font-size:.95rem;line-height:1.4;word-break:break-word}
+.contact-legal{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:rgba(28,14,7,.5);margin-top:1.6rem}
+
+/* form card with floating labels */
+.cform{display:flex;flex-direction:column;gap:1.05rem;background:#fff;border:1px solid var(--line-dark);border-radius:24px;
+  padding:clamp(1.6rem,3vw,2.4rem);box-shadow:0 30px 70px rgba(28,14,7,.10)}
+.cform-head h3{font-family:var(--disp);font-size:1.5rem;color:var(--ink)}
+.cform-head p{font-size:.85rem;color:rgba(28,14,7,.55);margin-top:.2rem}
+.field{position:relative}
+.field input,.field textarea{width:100%;border:1px solid var(--line-dark);border-radius:14px;padding:1.45rem 1rem .55rem;
+  font-size:.95rem;background:#fdfaf4;color:var(--ink);font-family:var(--body);transition:border-color .25s,box-shadow .25s,background .25s}
+.field textarea{min-height:130px;resize:vertical}
+.field label{position:absolute;left:1.05rem;top:50%;transform:translateY(-50%);font-size:.95rem;color:rgba(28,14,7,.5);
+  pointer-events:none;transition:.18s ease}
+.field textarea+label{top:1.2rem;transform:none}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--chilli);background:#fff;box-shadow:0 0 0 3px rgba(199,62,29,.12)}
+.field input:focus+label,.field input:not(:placeholder-shown)+label,
+.field textarea:focus+label,.field textarea:not(:placeholder-shown)+label{
+  top:.55rem;transform:none;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--chilli-deep);font-family:var(--mono)}
+.cform-btn{justify-content:center;margin-top:.3rem;width:100%}
+.cform .ok{color:var(--leaf);font-weight:600;display:none;text-align:center}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);border-top:1px solid var(--line);padding:2.6rem 0;font-size:.85rem;color:rgba(244,232,210,.55)}
+footer .wrap{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;align-items:center}
+.footer-logo{height:92px;width:auto;display:block;margin-right:auto}
+
+/* ---------- trace overlay (authenticity certificate) ---------- */
+.overlay{position:fixed;inset:0;z-index:90;display:none;align-items:center;justify-content:center;padding:1.2rem;background:rgba(15,7,3,.8);backdrop-filter:blur(8px)}
+.overlay.open{display:flex}
+.cert{width:min(720px,96vw);max-height:92svh;overflow:auto;background:var(--paper);color:var(--ink);border-radius:20px;position:relative;
+  box-shadow:0 60px 120px rgba(0,0,0,.6);border:1px solid rgba(28,14,7,.2)}
+.cert-inner{position:relative;padding:0 0 2.4rem}
+.cert .close{position:absolute;top:.9rem;right:1rem;z-index:3;background:rgba(244,232,210,.18);color:var(--cream);border:1px solid rgba(244,232,210,.4);border-radius:50%;width:36px;height:36px;font-size:.95rem}
+.cert .close:hover{background:rgba(244,232,210,.32)}
+/* branded header band */
+.cert-band{position:relative;overflow:hidden;text-align:center;color:var(--cream);padding:1.7rem 1.5rem 1.5rem;
+  border-bottom:3px solid var(--brand-gold);background:linear-gradient(135deg,var(--brand),var(--brand-deep))}
+.cert-band::after{content:"";position:absolute;inset:0;background:url("assets/images/body_background.jpg") center/cover no-repeat;opacity:.2;mix-blend-mode:screen;pointer-events:none}
+.cert-band img{height:46px;width:auto;display:block;margin:0 auto .7rem;position:relative;z-index:1}
+.cert-band .mono{position:relative;z-index:1;font-family:var(--mono);font-size:.66rem;letter-spacing:.32em;text-transform:uppercase;color:var(--turmeric-soft)}
+/* body */
+.cert-body{padding:1.7rem clamp(1.4rem,5vw,2.4rem) 0;text-align:center}
+.cert-body h3{font-family:var(--disp);font-size:clamp(1.6rem,4vw,2rem);margin:.1rem 0}
+.batchno{font-family:var(--mono);font-size:1rem;letter-spacing:.14em;background:rgba(28,14,7,.06);border:1px solid rgba(28,14,7,.14);display:inline-block;padding:.4rem 1.1rem;border-radius:999px;margin-top:.7rem}
+.result-pass{display:inline-flex;align-items:center;gap:.5rem;margin-top:1rem;background:rgba(94,115,72,.14);color:#4f6a37;border:1px solid rgba(94,115,72,.55);border-radius:999px;padding:.5rem 1.3rem;font-weight:700;font-family:var(--mono);font-size:.76rem;letter-spacing:.14em}
+.cert-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(28,14,7,.14);border:1px solid rgba(28,14,7,.14);border-radius:14px;overflow:hidden;margin:1.6rem 0 0;text-align:left}
+.cert-cell{background:var(--paper);padding:.95rem 1.15rem}
+.cert-cell.full{grid-column:1/-1}
+.cert-cell small{display:block;font-family:var(--mono);font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--chilli-deep);margin-bottom:.3rem}
+.cert-cell .v{font-weight:600;font-size:.96rem;color:var(--ink);line-height:1.45}
+.cert-foot{margin:1.4rem 0 0;font-size:.8rem;color:rgba(28,14,7,.55);text-align:left;max-width:48ch}
+.seal{position:absolute;right:clamp(.8rem,4vw,2rem);bottom:1.1rem;width:104px;height:104px;transform:rotate(-12deg)}
+.notfound{text-align:center;padding:1.8rem 0 .5rem}
+.notfound .glyph{font-size:3rem}
+.notfound h3{font-family:var(--disp);font-size:1.7rem;margin:.6rem 0 .4rem}
+.notfound .result-fail{display:inline-block;margin:.2rem 0 1rem;background:rgba(199,62,29,.12);color:var(--chilli-deep);border:1px solid var(--chilli);border-radius:999px;padding:.4rem 1.2rem;font-weight:700;font-family:var(--mono);font-size:.78rem;letter-spacing:.16em}
+.notfound p{color:rgba(28,14,7,.65);max-width:42ch;margin-inline:auto}
+
+/* ---------- toast ---------- */
+.toast{position:fixed;left:50%;bottom:2rem;transform:translate(-50%,calc(100% + 3rem));opacity:0;visibility:hidden;pointer-events:none;background:var(--leaf);color:#fff;padding:.85rem 1.5rem;border-radius:999px;font-weight:600;font-size:.9rem;z-index:120;transition:transform .4s cubic-bezier(.2,.9,.3,1.2),opacity .3s ease,visibility .4s;box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.toast.show{transform:translate(-50%,0);opacity:1;visibility:visible;pointer-events:auto}
+
+/* ---------- storytelling about ---------- */
+.story-tell .st-intro{max-width:820px;margin-bottom:clamp(2.5rem,5vw,4rem)}
+.story-tell .st-intro h2{font-size:clamp(2.2rem,4.4vw,3.4rem);margin:1rem 0 1.2rem}
+.story-tell .st-lead{font-size:1.1rem;color:rgba(28,14,7,.75);font-weight:300;max-width:62ch}
+.st-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(2rem,5vw,4.5rem);align-items:start}
+.st-portrait{position:sticky;top:5.5rem}
+.st-portrait img{width:100%;border-radius:20px;display:block;border:1px solid var(--line-dark);box-shadow:0 30px 70px rgba(28,14,7,.28)}
+.st-portrait figcaption{margin-top:1.1rem}
+.st-portrait figcaption b{display:block;font-family:var(--disp);font-size:1.35rem;color:var(--ink)}
+.st-portrait figcaption span{font-family:var(--mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--chilli-deep)}
+
+/* vertical story timeline */
+.timeline{--rail:11px;list-style:none;position:relative;padding-left:2.9rem}
+/* fine ornamental gold rail, fading at both ends */
+.timeline::before{content:"";position:absolute;left:var(--rail);top:1rem;bottom:1rem;width:1.5px;transform:translateX(-50%);
+  background:linear-gradient(rgba(199,154,75,0),var(--brand-gold) 7%,var(--brand-gold) 93%,rgba(199,154,75,0))}
+.beat{position:relative;padding-bottom:2.9rem}
+.beat:last-child{padding-bottom:0}
+/* gold diamond node, cream halo masks the rail behind it */
+.beat::before{content:"";position:absolute;left:calc(var(--rail) - 2.9rem);top:.5rem;width:11px;height:11px;transform:translateX(-50%) rotate(45deg);
+  background:var(--turmeric);border:1px solid var(--brand-gold);box-shadow:0 0 0 4px var(--cream)}
+.beat .marker{font-family:var(--mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--chilli-deep)}
+.beat h3{font-family:var(--disp);font-size:1.45rem;margin:.4rem 0 .5rem;color:var(--ink)}
+.beat p{color:rgba(28,14,7,.78);font-weight:300}
+.beat-quote{padding:.8rem 0 3rem}
+.beat-quote::before{width:17px;height:17px;background:transparent;border:1.5px solid var(--brand-gold);
+  box-shadow:0 0 0 4px var(--cream),inset 0 0 0 3px var(--turmeric)}
+.beat-quote .kicker{font-family:var(--disp);font-style:italic;font-size:clamp(1.45rem,2.6vw,2.05rem);line-height:1.4;color:var(--chilli-deep);max-width:26ch}
+
+/* closing values */
+.st-values{position:relative;z-index:0;margin-top:clamp(3rem,6vw,5rem);padding:clamp(3rem,5vw,4.5rem) 0}
+.st-values::before{content:"";position:absolute;top:0;bottom:-7.5rem;left:50%;transform:translateX(-50%);width:100vw;z-index:-1;
+  background:url("assets/images/3 background.png") center/cover no-repeat;
+  -webkit-mask:linear-gradient(to bottom, transparent 0, #000 160px);
+          mask:linear-gradient(to bottom, transparent 0, #000 160px)}
+.st-values .eyebrow{margin-bottom:1.8rem}
+
+/* ---------- vision / mission / promise ---------- */
+.vmp{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:1rem}
+.card-v{position:relative;overflow:hidden;border-radius:18px;padding:2.2rem 1.8rem 1.9rem;color:var(--cream);
+  border:1px solid rgba(199,154,75,.32);
+  background:linear-gradient(rgba(26,8,10,.62),rgba(26,8,10,.76)),url("assets/images/hero_background.png") center/cover;
+  box-shadow:0 18px 44px rgba(28,14,7,.28);transition:transform .3s ease,box-shadow .3s ease}
+.card-v:hover{transform:translateY(-5px);box-shadow:0 28px 56px rgba(28,14,7,.45)}
+.card-v::before{content:"";position:absolute;left:0;top:0;width:100%;height:4px}
+.card-v::after{position:absolute;top:1.05rem;right:1.5rem;font-family:var(--disp);font-size:2.6rem;line-height:1;opacity:.42}
+.card-v .tag{font-family:var(--mono);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase}
+.card-v h3{font-family:var(--disp);font-size:1.3rem;margin:.7rem 0 .6rem;color:var(--cream)}
+.card-v p{color:rgba(244,232,210,.82);font-weight:300;font-size:.95rem}
+/* tri-tone identity over the maroon photo — light, readable accents */
+.card-v:nth-child(1){background:radial-gradient(130% 75% at 50% -15%, rgba(233,161,59,.3), transparent 60%),linear-gradient(rgba(26,8,10,.6),rgba(26,8,10,.76)),url("assets/images/hero_background.png") center/cover}
+.card-v:nth-child(1)::before{background:var(--turmeric)}
+.card-v:nth-child(1)::after{content:"01";color:var(--turmeric-soft)}
+.card-v:nth-child(1) .tag{color:var(--turmeric-soft)}
+.card-v:nth-child(2){background:radial-gradient(130% 75% at 50% -15%, rgba(199,62,29,.34), transparent 60%),linear-gradient(rgba(26,8,10,.6),rgba(26,8,10,.76)),url("assets/images/hero_background.png") center/cover}
+.card-v:nth-child(2)::before{background:var(--chilli)}
+.card-v:nth-child(2)::after{content:"02";color:#ff9d7e}
+.card-v:nth-child(2) .tag{color:#ff9d7e}
+.card-v:nth-child(3){background:radial-gradient(130% 75% at 50% -15%, rgba(107,127,79,.42), transparent 60%),linear-gradient(rgba(26,8,10,.6),rgba(26,8,10,.76)),url("assets/images/hero_background.png") center/cover}
+.card-v:nth-child(3)::before{background:var(--leaf)}
+.card-v:nth-child(3)::after{content:"03";color:#b6c896}
+.card-v:nth-child(3) .tag{color:#b6c896}
+.promise-row{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.8rem}
+.promise-row span{font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;border-radius:999px;padding:.5rem 1.1rem;border:1px solid}
+.promise-row span:nth-child(1){background:rgba(233,161,59,.14);color:#a96e16;border-color:rgba(233,161,59,.5)}
+.promise-row span:nth-child(2){background:rgba(199,62,29,.1);color:var(--chilli-deep);border-color:rgba(199,62,29,.4)}
+.promise-row span:nth-child(3){background:rgba(107,127,79,.16);color:#52663d;border-color:rgba(107,127,79,.55)}
+
+/* ---------- newsletter ---------- */
+.newsletter{background:var(--brand-deep);color:var(--cream)}
+.newsletter .wrap{text-align:center;max-width:640px}
+.newsletter h2{font-family:var(--disp);font-weight:400;font-size:clamp(1.8rem,3vw,2.4rem);margin-bottom:.6rem}
+.newsletter .eyebrow{justify-content:center;color:var(--turmeric-soft);margin-bottom:1rem}
+.newsletter p{color:rgba(244,232,210,.72);font-weight:300;margin-bottom:1.6rem}
+.news-form{display:flex;gap:.6rem;max-width:460px;margin-inline:auto}
+.news-form input{flex:1;background:rgba(244,232,210,.08);border:1px solid var(--line);border-radius:999px;color:var(--cream);padding:.9rem 1.3rem;font-size:.95rem}
+.news-form input::placeholder{color:rgba(244,232,210,.45)}
+.news-ok{display:none;margin-top:1rem;color:var(--turmeric-soft);font-weight:600}
+
+/* ---------- footer links ---------- */
+.footer-nav{display:flex;gap:1.3rem;flex-wrap:wrap}
+.footer-nav a{font-size:.82rem;color:rgba(244,232,210,.6);text-decoration:none}
+.footer-nav a:hover{color:var(--turmeric)}
+
+/* ---------- mobile ---------- */
+@media (max-width:920px){
+  .hero .wrap{grid-template-columns:1fr;padding-top:7rem}
+  .hero-art{order:-1}
+  .mandala{width:min(280px,62vw)}
+  .about .wrap,.contact .wrap,.st-grid{grid-template-columns:1fr;gap:2.6rem}
+  .st-portrait{position:static;max-width:340px}
+  .vmp{grid-template-columns:1fr}
+  .news-form{flex-direction:column}
+  .nav-links{position:fixed;inset:0 0 auto 0;top:58px;background:rgba(28,14,7,.97);flex-direction:column;padding:1.6rem 6vw 2rem;gap:1.2rem;align-items:flex-start;display:none;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .nav-burger{display:block}
+  .q-grid{grid-template-columns:34px 1fr;gap:0 1.1rem}
+  .q-counters,.stat-row{grid-template-columns:1fr}
+  .trace-form{flex-direction:column}
+  .section{padding:5rem 0}
+  .seal{position:static;display:block;margin:1.5rem auto 0;transform:rotate(-8deg)}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+
+/* ============================================================
+   60-30-10 PALETTE SYSTEM
+   60% DOMINANT  — cream #f4e8d2 (body, hero, about, products, contact)
+   30% SECONDARY — clove brown #1c0e07 (nav, ribbon, process, quality, footer, admin)
+   10% ACCENT    — chilli #c73e1d (CTAs, links, trace pill, key chips ONLY)
+   Turmeric gold survives only inside imagery (mandala / spice bowl),
+   never as a UI colour. Green/red appear only as PASS/FAIL status.
+   ============================================================ */
+body{background:var(--cream);color:var(--ink)}
+.accent-i{color:var(--chilli)}
+
+/* nav: transparent over the maroon hero (light text) → brown bar when scrolled */
+.nav{color:var(--cream)}
+.nav.scrolled{color:var(--cream)}
+.nav-burger{color:inherit;border-color:currentColor}
+.nav-trace{background:var(--chilli);color:#fff!important}
+.nav-trace:hover{background:var(--chilli-deep)}
+.nav-links a:hover{color:var(--turmeric-soft);opacity:1}
+.nav.scrolled .nav-links a:hover{color:var(--turmeric-soft)}
+
+/* hero → maroon damask photo backdrop (gold + chilli glow over it) */
+.hero{background:
+  radial-gradient(1000px 560px at 88% -12%, rgba(199,154,75,.20), transparent 60%),
+  radial-gradient(820px 640px at -8% 112%, rgba(199,62,29,.16), transparent 60%),
+  linear-gradient(180deg, rgba(24,8,10,.30), rgba(24,8,10,.45)),
+  url('assets/images/hero_background.png') center/cover no-repeat fixed,
+  var(--brand-deep);
+  color:var(--cream)}
+.hero .eyebrow{color:var(--turmeric-soft)}
+.hero p.lead{color:rgba(244,232,210,.82)}
+.hero-hook{background:#fff;border-color:var(--line-dark);box-shadow:0 22px 60px rgba(0,0,0,.4)}
+.hero-hook label{color:var(--chilli-deep)}
+.trace-form input{background:#fdfaf4;border-color:var(--line-dark);color:var(--ink)}
+.trace-form input::placeholder{color:rgba(28,14,7,.38)}
+.hero-hook .hint{color:rgba(28,14,7,.55)}
+.hero-hook .hint button{color:var(--chilli-deep)}
+.hero-badges span{color:rgba(244,232,210,.72)}
+.hero-badges b{color:var(--turmeric)}
+.mandala-plate{filter:drop-shadow(0 24px 50px rgba(28,14,7,.28))}
+
+/* ribbon: was a full-width accent flood → now secondary brown */
+.ribbon{background:var(--ink-2);color:var(--cream);border-block:1px solid rgba(28,14,7,.3)}
+.ribbon-track i{color:var(--chilli);opacity:.9}
+
+/* secondary (30%) dark sections: process + quality keep brown; gold UI → cream/chilli */
+.q-step h3 .tag{color:rgba(244,232,210,.55)}
+.q-counter .num{color:var(--cream)}
+.qr-note{border-color:rgba(244,232,210,.35);background:rgba(244,232,210,.04)}
+.qr-note .mono{color:var(--turmeric-soft)}
+.process .eyebrow,.quality .eyebrow{color:rgba(244,232,210,.65)}
+
+
+/* certificate accents */
+.cert-head .mono{color:var(--chilli-deep)}
+
+/* mobile menu always sits on a brown panel → force light text there */
+@media (max-width:920px){
+  .nav-links{background:rgba(28,14,7,.97)}
+  .nav-links a{color:var(--cream)}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a class="logo" href="#home"><img src="assets/images/header_logo .png" alt="Rusiyaa — Best in Taste"></a>
+    <button class="nav-burger" id="burger" aria-label="Menu">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#quality">Quality</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#home" class="nav-trace" id="navTrace">Trace your batch</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="home">
+  <div class="wrap">
+    <div class="hero-copy">
+      <div class="eyebrow">A brand of Arul's Foods · Chennai</div>
+      <h1 class="h-disp">Spice you can <span class="accent-i">trace</span> back to its batch.</h1>
+      <p class="lead">Authentic spices and masalas — sourced from FSSAI-licensed makers and repacked fresh under the RUSIYAA brand. Every pack carries a batch code that opens its full authenticity record.</p>
+
+      <div class="hero-hook" id="trace">
+        <label for="batchInput">Verify your pack — enter batch number</label>
+        <form class="trace-form" id="traceForm">
+          <input id="batchInput" placeholder="e.g. RSY-2605-A12" autocomplete="off" aria-label="Batch number">
+          <button class="btn btn-chilli" type="submit">Trace it →</button>
+        </form>
+        <p class="hint">Scanned the QR on your pack? You land here automatically. Try a sample: <button type="button" data-sample="RSY-2605-A12">RSY-2605-A12</button></p>
+      </div>
+
+      <div class="hero-badges">
+        <span><b>✓</b> FSSAI compliant</span>
+        <span><b>✓</b> Quality-checked</span>
+        <span><b>✓</b> No added colours</span>
+      </div>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <div class="mandala" id="mandala">
+        <img class="mandala-base" id="mandalaBase" src="assets/images/hero .png" alt="">
+        <img class="mandala-plate" id="mandalaPlate" src="assets/images/plate .png" alt="">
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= RIBBON ================= -->
+<div class="ribbon" aria-hidden="true">
+  <div class="ribbon-track" id="ribbonTrack">
+    <span>Chilli Powder <i>◆</i> Coriander Powder <i>◆</i> Turmeric Powder <i>◆</i> Garam Masala <i>◆</i> Chicken 65 <i>◆</i> Chicken Curry Masala <i>◆</i> Best in Taste <i>◆</i></span>
+    <span>Chilli Powder <i>◆</i> Coriander Powder <i>◆</i> Turmeric Powder <i>◆</i> Garam Masala <i>◆</i> Chicken 65 <i>◆</i> Chicken Curry Masala <i>◆</i> Best in Taste <i>◆</i></span>
+    <span>Chilli Powder <i>◆</i> Coriander Powder <i>◆</i> Turmeric Powder <i>◆</i> Garam Masala <i>◆</i> Chicken 65 <i>◆</i> Chicken Curry Masala <i>◆</i> Best in Taste <i>◆</i></span>
+  </div>
+</div>
+
+<!-- ================= ABOUT / OUR STORY (storytelling) ================= -->
+<section class="section light story-tell" id="about">
+  <div class="wrap st-intro">
+    <div class="eyebrow">Our story</div>
+    <h2 class="h-disp">Every pack carries <span class="accent-i">a promise.</span></h2>
+    <p class="st-lead"><b>RUSIYAA</b> is the signature brand of <b>Arul's Foods</b> — built to bring traditional flavours, premium quality and modern convenience to everyday kitchens. But the story behind the brand began long before the first pack was ever sealed.</p>
+  </div>
+
+  <div class="wrap st-grid">
+    <figure class="st-portrait">
+      <img src="assets/images/owner.png" alt="Late Mr. Arul, founder of Arul's Foods">
+      <figcaption><b>Late Mr. Arul</b><span>Founder · Inspiration · Visionary</span></figcaption>
+    </figure>
+
+    <ol class="timeline">
+      <li class="beat">
+        <span class="marker">The beginning</span>
+        <h3>A dream, and the will to chase it</h3>
+        <p>Our founder, Mr. Arul, started his career as an employee at a petrol bunk — carried by a simple belief that no job was too small and no dream too big.</p>
+      </li>
+      <li class="beat">
+        <span class="marker">35 years</span>
+        <h3>A lifetime learning food</h3>
+        <p>Through dedication and discipline he built a remarkable journey in hospitality, gaining invaluable experience in food preparation, quality, customer preferences, and the importance of serving people with honesty.</p>
+      </li>
+      <li class="beat">
+        <span class="marker">The decision</span>
+        <h3>Turning passion into a brand</h3>
+        <p>As retirement approached, he set out to turn his lifelong passion for food into a business of his own — so families could experience the same rich flavours and quality he had spent decades perfecting.</p>
+      </li>
+      <li class="beat">
+        <span class="marker">An unexpected loss</span>
+        <h3>Before the dream could begin</h3>
+        <p>Plans were made and recipes were refined. But before he could see his dream become reality, he passed away unexpectedly.</p>
+      </li>
+      <li class="beat beat-quote">
+        <p class="kicker">What could have been the end of a dream became the beginning of a promise.</p>
+      </li>
+      <li class="beat">
+        <span class="marker">The promise</span>
+        <h3>Carried forward by family</h3>
+        <p>As his daughter and son-in-law, we chose to carry his vision forward. This is more than a brand — it is a tribute to a father, mentor and hardworking man whose values continue to guide us every day.</p>
+      </li>
+      <li class="beat">
+        <span class="marker">Today</span>
+        <h3>RUSIYAA — Best in Taste</h3>
+        <p>Through our flagship brand, the family continues to share authentic taste and trusted quality with households across India. We are not just selling spices — we are continuing a legacy, with every home we serve.</p>
+      </li>
+    </ol>
+  </div>
+
+  <div class="wrap st-values">
+    <div class="eyebrow">What guides us</div>
+    <div class="vmp">
+      <div class="card-v">
+        <span class="tag">Vision</span>
+        <h3>A trusted household name</h3>
+        <p>To become a trusted household FMCG brand that delivers quality, authenticity and value across food and everyday consumer products — making RUSIYAA a preferred choice for families across India.</p>
+      </div>
+      <div class="card-v">
+        <span class="tag">Mission</span>
+        <h3>Tradition meets convenience</h3>
+        <p>To create a brand that combines traditional values, modern convenience and an excellent customer experience, while consistently delivering products that families can trust.</p>
+      </div>
+      <div class="card-v">
+        <span class="tag">Quality &amp; FSSAI</span>
+        <h3>Quality at the heart</h3>
+        <p>We source from FSSAI-licensed partners and adhere to applicable FSSAI guidelines for quality, safety and labelling — so every product meets our standards before reaching you.</p>
+      </div>
+    </div>
+    <div class="promise-row">
+      <span>Trusted Quality</span>
+      <span>Authentic Products</span>
+      <span>Fair Pricing</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROCESS (pinned horizontal scroll) ================= -->
+<section class="process" id="process">
+  <div class="story" id="story">
+    <div class="story-grid">
+      <div class="story-aside">
+        <div class="eyebrow">How RUSIYAA works</div>
+        <h2>From trusted source<br>to your shelf.</h2>
+        <div class="rule"></div>
+        <div class="story-rail" id="storyRail">
+          <button type="button" data-i="0"><i>01</i> Sourced</button>
+          <button type="button" data-i="1"><i>02</i> Quality-checked</button>
+          <button type="button" data-i="2"><i>03</i> Repacked &amp; coded</button>
+          <button type="button" data-i="3"><i>04</i> Distributed</button>
+        </div>
+      </div>
+      <div class="story-stage" id="storyStage">
+        <article class="scard" data-i="0"><span class="p-no">01</span><span class="step">STAGE 01 — SOURCED</span><h3>From FSSAI-licensed partners</h3><p>We source quality spices and masala products only from approved, FSSAI-licensed manufacturing partners we trust.</p><span class="glyph">🌿</span></article>
+        <article class="scard" data-i="1"><span class="p-no">02</span><span class="step">STAGE 02 — QUALITY-CHECKED</span><h3>Checked before anything moves on</h3><p>Every product is checked for quality, safety, freshness and consistency before it is approved for the RUSIYAA brand.</p><span class="glyph">✅</span></article>
+        <article class="scard" data-i="2"><span class="p-no">03</span><span class="step">STAGE 03 — REPACKED &amp; CODED</span><h3>Sealed and batch-coded</h3><p>Approved products are repacked and sealed under the RUSIYAA brand, each pack carrying a unique batch code and QR for verification.</p><span class="glyph">📦</span></article>
+        <article class="scard" data-i="3"><span class="p-no">04</span><span class="step">STAGE 04 — DISTRIBUTED</span><h3>Onto kitchen shelves</h3><p>Supplied to supermarkets, distributors, wholesale dealers and retail stores — with online platforms planned for the future.</p><span class="glyph">🛒</span></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRODUCTS ================= -->
+<section class="section light products" id="products">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <div class="eyebrow">Products · Masala range</div>
+        <h2 class="h-disp">The everyday <span class="accent-i">range.</span></h2>
+      </div>
+      <p>A focused range of spices and masalas for the South Indian kitchen, sourced from FSSAI-licensed manufacturers and repacked fresh under the RUSIYAA brand. More products are added over time — no online purchase required.</p>
+    </div>
+    <div class="grid" id="productGrid"></div>
+  </div>
+</section>
+
+<!-- ================= QUALITY ================= -->
+<section class="section quality" id="quality">
+  <div class="wrap">
+    <div class="eyebrow">Quality · FSSAI Compliance</div>
+    <h2 class="h-disp">Quality you can trust, authenticity you can verify.</h2>
+
+    <div class="q-grid">
+      <div class="q-linecol">
+        <svg width="64" viewBox="0 0 64 1000" preserveAspectRatio="none" aria-hidden="true">
+          <path id="qPath" d="M32 0 V1000" stroke="rgba(244,232,210,.18)" stroke-width="2" fill="none"/>
+          <path id="qPathDraw" d="M32 0 V1000" stroke="#c73e1d" stroke-width="2" fill="none"/>
+        </svg>
+      </div>
+      <div class="q-steps" id="qSteps">
+        <div class="q-step"><h3><span class="tag">STEP 01</span>Trusted sourcing</h3><p>We source only from approved, FSSAI-licensed manufacturing partners — never from unverified suppliers.</p></div>
+        <div class="q-step"><h3><span class="tag">STEP 02</span>Quality checks before packing</h3><p>Every product is checked for quality, safety, freshness and consistency before it is repacked under the RUSIYAA brand.</p></div>
+        <div class="q-step"><h3><span class="tag">STEP 03</span>FSSAI compliance &amp; labelling</h3><p>We adhere to applicable FSSAI guidelines so every product meets quality, safety and labelling standards before reaching consumers.</p></div>
+        <div class="q-step"><h3><span class="tag">STEP 04</span>Batch coding</h3><p>Each sealed pack is stamped with a unique batch code and a QR code that links straight to its authenticity record.</p></div>
+        <div class="q-step"><h3><span class="tag">STEP 05</span>QR verification</h3><p>Anyone can scan the QR or enter the batch code on this site to confirm a pack is a genuine RUSIYAA product.</p></div>
+      </div>
+    </div>
+
+    <div class="q-counters">
+      <div class="q-counter"><div class="num" data-count="100" data-suffix="%">0</div><small>Sourced from FSSAI-licensed partners</small></div>
+      <div class="q-counter"><div class="num" data-count="0">0</div><small>Added colours or fillers</small></div>
+      <div class="q-counter"><div class="num" data-count="100" data-suffix="%">0</div><small>Batches traceable online</small></div>
+    </div>
+
+    <div class="qr-note">
+      <div class="qr-box" aria-hidden="true"></div>
+      <p><b>How verification works:</b> scan the QR code on your pack — or enter its batch code in the box on the home page — and our system confirms the product against the RUSIYAA register, showing the batch ID, product name, SKU, manufacturer details and FSSAI licence. A genuine pack shows a verified result; anything else shows <span class="mono">Product Not Verified</span>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section light contact" id="contact">
+  <div class="wrap">
+    <div class="info">
+      <div class="eyebrow">Contact</div>
+      <h2 class="h-disp">Talk to <span class="accent-i">RUSIYAA.</span></h2>
+      <p class="contact-lead">Distributor, wholesale and retailer enquiries, or a question about a pack you traced — write to us and our team will be happy to help.</p>
+
+      <div class="contact-cards">
+        <div class="ccard">
+          <span class="ccard-ic" aria-hidden="true">📍</span>
+          <span class="ccard-tx"><small>Arul's Foods</small><b>Subhiksham Building, N. No: 5A, 5B &amp; 5C (O. No: 3A, 3B &amp; 3C), Thiruvallur Street, Kodambakkam, Chennai – 600024</b></span>
+        </div>
+        <a class="ccard" href="tel:+919941402534">
+          <span class="ccard-ic" aria-hidden="true">📞</span>
+          <span class="ccard-tx"><small>Call us</small><b>+91 99414 02534</b></span>
+        </a>
+        <a class="ccard" href="mailto:customercare.ruisyaa@arulsfoods.com">
+          <span class="ccard-ic" aria-hidden="true">✉️</span>
+          <span class="ccard-tx"><small>Email</small><b>customercare.ruisyaa@arulsfoods.com</b></span>
+        </a>
+        <a class="ccard" href="https://www.rusiyaa.com" target="_blank" rel="noopener">
+          <span class="ccard-ic" aria-hidden="true">🌐</span>
+          <span class="ccard-tx"><small>Website</small><b>www.rusiyaa.com</b></span>
+        </a>
+      </div>
+      <p class="contact-legal">GSTIN: 33FNZPK6605J1ZD &nbsp;·&nbsp; FSSAI Licensed</p>
+    </div>
+
+    <form class="cform" id="contactForm">
+      <div class="cform-head">
+        <h3>Send a message</h3>
+        <p>Replies usually within a business day — straight to our WhatsApp.</p>
+      </div>
+      <div class="field">
+        <input required id="cf-name" placeholder=" " aria-label="Your name">
+        <label for="cf-name">Your name</label>
+      </div>
+      <div class="field">
+        <input required type="text" id="cf-contact" placeholder=" " aria-label="Email or phone">
+        <label for="cf-contact">Email or phone</label>
+      </div>
+      <div class="field">
+        <textarea required id="cf-msg" placeholder=" " aria-label="Your message"></textarea>
+        <label for="cf-msg">Your message</label>
+      </div>
+      <button class="btn btn-chilli cform-btn" type="submit">Send via WhatsApp</button>
+      <p class="ok" id="contactOk">✓ Opening WhatsApp — just tap send to reach us.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ================= NEWSLETTER ================= -->
+<section class="section newsletter" id="newsletter">
+  <div class="wrap">
+    <div class="eyebrow">Newsletter</div>
+    <h2>Never miss an important update.</h2>
+    <p>With our newsletter, you'll be the first to know about new RUSIYAA products and announcements.</p>
+    <form class="news-form" id="newsForm">
+      <input type="email" required placeholder="Enter your email" aria-label="Email address">
+      <button class="btn btn-chilli" type="submit">Subscribe</button>
+    </form>
+    <p class="news-ok" id="newsOk">✓ Opening WhatsApp — tap send and we'll add you.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img class="footer-logo" src="assets/images/logo .png" alt="RUSIYAA — Best in Taste">
+    <nav class="footer-nav">
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="faq.html">FAQ</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="trademark.html">Trademark &amp; Copyright</a>
+    </nav>
+    <span>© 2026 RUSIYAA — A brand of ARUL'S FOODS · Chennai, Tamil Nadu, India</span>
+  </div>
+</footer>
+
+<!-- ================= TRACE CERTIFICATE OVERLAY ================= -->
+<div class="overlay" id="traceOverlay" role="dialog" aria-modal="true" aria-label="Batch certificate">
+  <div class="cert">
+    <button class="close" data-close="traceOverlay" aria-label="Close">✕</button>
+    <div class="cert-inner" id="certBody"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+/* =====================================================
+   DEMO DATA — in the production build this lives in a
+   database (e.g. Supabase Postgres). Here it's in-memory
+   so the prototype runs anywhere.
+===================================================== */
+let products = [
+  {id:1, name:"Chilli Powder", cat:"Spice", desc:"Vibrant, evenly ground red chilli for everyday heat and natural colour — no added dyes.", price:"50g · 100g", heat:3, g1:"#c73e1d", g2:"#5e1505", glyph:"🌶", img:"assets/images/Product images/Chilli powder.jpeg"},
+  {id:2, name:"Coriander Powder", cat:"Spice", desc:"Warm, citrusy coriander (dhania) — the quiet base of South Indian gravies and curries.", price:"50g · 100g", heat:0, g1:"#9c8b4d", g2:"#4d4220", glyph:"❋", img:"assets/images/Product images/coriander powder.jpeg"},
+  {id:3, name:"Turmeric Powder", cat:"Spice", desc:"Bright, earthy turmeric for colour, aroma and everyday cooking.", price:"50g · 100g", heat:0, g1:"#e9a13b", g2:"#8a5410", glyph:"☀", img:"assets/images/Product images/Turmeric Powder .jpeg"},
+  {id:4, name:"Garam Masala", cat:"Blend", desc:"A balanced blend of warm whole spices to finish and lift any dish.", price:"50g · 100g", heat:2, g1:"#7a2410", g2:"#3a0f05", glyph:"✦", img:"assets/images/Product images/garam masala.jpeg"},
+  {id:5, name:"Chicken 65 Masala", cat:"Blend", desc:"A ready spice mix for the classic fiery South Indian chicken fry.", price:"50g · 100g", heat:3, g1:"#b5471d", g2:"#4a1505", glyph:"◉", img:"assets/images/Product images/Chicken 65 masala.jpeg"},
+  {id:6, name:"Chicken Curry Masala", cat:"Blend", desc:"A rich, aromatic masala blend for authentic South Indian chicken curries and gravies.", price:"50g · 100g", heat:2, g1:"#8a2c12", g2:"#3a0f05", glyph:"◈", img:"assets/images/Product images/Chicken curry masala.jpeg"},
+];
+
+let batches = [
+  {no:"RSY-2605-A12", product:"Garam Masala 100g", sku:"RSY-GM-100", mfr:"Repacked & marketed by Arul's Foods · Sourced from an FSSAI-licensed manufacturing partner", fssai:"FSSAI Lic. No. 1XXXXXXXXXXXX", mfg:"02 May 2026", exp:"01 May 2027"},
+  {no:"RSY-2604-C04", product:"Chilli Powder 200g", sku:"RSY-CP-200", mfr:"Repacked & marketed by Arul's Foods · Sourced from an FSSAI-licensed manufacturing partner", fssai:"FSSAI Lic. No. 1XXXXXXXXXXXX", mfg:"18 Apr 2026", exp:"17 Apr 2027"},
+  {no:"RSY-2603-T18", product:"Turmeric Powder 200g", sku:"RSY-TP-200", mfr:"Repacked & marketed by Arul's Foods · Sourced from an FSSAI-licensed manufacturing partner", fssai:"FSSAI Lic. No. 1XXXXXXXXXXXX", mfg:"22 Mar 2026", exp:"21 Mar 2027"},
+];
+
+/* =====================================================
+   BATCH REGISTER (optional Google Sheets backend, read-only)
+   The QR / batch lookup can read live from a Google Sheet:
+   1. In your Sheet: Extensions → Apps Script → paste the
+      trace script → Deploy → Web app (Access: Anyone).
+   2. Paste the /exec URL below. Until then the lookup runs
+      on the built-in demo batches above.
+   Batch data is now maintained directly in the Sheet (or in
+   the demo array above) — there is no in-page admin editor.
+===================================================== */
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzdZS2NePF-2OgiNR31kNlVLPdCVtrgGWDpYqS_7mwIkNsJDvVcsz9pD9aLecb3Tu5oug/exec";
+const live = () => SCRIPT_URL.startsWith("https://script.google.com");
+
+/* ============ helpers ============ */
+const $ = s => document.querySelector(s);
+const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function toast(msg){ const t=$('#toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),2600); }
+function openOverlay(id){ $('#'+id).classList.add('open'); document.body.style.overflow='hidden'; }
+function closeOverlay(id){ $('#'+id).classList.remove('open'); document.body.style.overflow=''; }
+document.addEventListener('click', e=>{
+  if(e.target.dataset.close) closeOverlay(e.target.dataset.close);
+  if(e.target.classList.contains('overlay')) { e.target.classList.remove('open'); document.body.style.overflow=''; }
+});
+
+/* ============ render products ============ */
+function heatDots(h){ let s=''; for(let i=0;i<3;i++) s+=`<span class="${i<h?'on':''}">●</span>`; return h? s+' heat':'mild'; }
+function renderProducts(){
+  const grid = $('#productGrid');
+  grid.innerHTML = products.map(p=>`
+    <article class="card" data-anim>
+      <div class="pack">
+        <span class="ptag">${p.cat}</span>
+        ${p.img ? `<img class="pimg" src="${p.img}" alt="${p.name}" loading="lazy">` : `<span class="pglyph">${p.glyph}</span>`}
+      </div>
+      <div class="card-body">
+        <h3>${p.name}</h3>
+        <p>${p.desc}</p>
+        <div class="card-meta"><span class="price">${p.price}</span><span class="heat">${heatDots(p.heat)}</span></div>
+      </div>
+    </article>`).join('');
+  if(window.ScrollTrigger && !reduced){
+    gsap.utils.toArray('#productGrid .card').forEach((c,i)=>{
+      gsap.from(c,{y:60,opacity:0,rotate:i%2?1.5:-1.5,duration:.8,ease:'power3.out',
+        scrollTrigger:{trigger:c,start:'top 88%'}});
+    });
+    ScrollTrigger.refresh();
+  }
+}
+
+/* ============ floating spice particles ============ */
+(function(){
+  if(reduced) return;
+  const hero = document.querySelector('.hero');
+  const colors=['#e9a13b','#c73e1d','#f2c279','#9c2c11'];
+  for(let i=0;i<22;i++){
+    const p=document.createElement('span'); p.className='particle';
+    const sz=2+Math.random()*5;
+    p.style.cssText=`width:${sz}px;height:${sz}px;background:${colors[i%4]};left:${Math.random()*100}%;top:${Math.random()*100}%;opacity:${.25+Math.random()*.5}`;
+    hero.appendChild(p);
+    gsap.to(p,{y:'-=+'+(40+Math.random()*120), x:'+='+(Math.random()*60-30), repeat:-1, yoyo:true,
+      duration:6+Math.random()*8, ease:'sine.inOut', delay:Math.random()*4});
+  }
+})();
+
+/* ============ GSAP scroll choreography ============ */
+gsap.registerPlugin(ScrollTrigger);
+window.addEventListener('load', ()=>{
+  renderProducts();
+  if(reduced){ document.querySelectorAll('[data-count]').forEach(el=>{el.textContent=el.dataset.count+(el.dataset.suffix||'')}); return; }
+
+  /* hero entrance */
+  const h1 = document.querySelector('.hero h1');
+  h1.innerHTML = h1.textContent.split(' ').map(w=>`<span style="display:inline-block">${w==='trace'?'<em class="accent-i">trace</em>':w}&nbsp;</span>`).join('');
+  gsap.timeline()
+    .from('.hero .eyebrow',{y:20,opacity:0,duration:.6,ease:'power2.out'})
+    .from('.hero h1 span',{y:50,opacity:0,stagger:.07,duration:.8,ease:'power3.out'},'-=.2')
+    .from('.hero .lead',{y:30,opacity:0,duration:.7},'-=.4')
+    .from('.hero-hook',{y:30,opacity:0,scale:.97,duration:.7,ease:'back.out(1.4)'},'-=.35')
+    .from('.hero-badges span',{y:14,opacity:0,stagger:.08,duration:.5},'-=.3')
+    .from('.mandala',{scale:.8,opacity:0,duration:1.1,ease:'power3.out'},0.2);
+
+  gsap.to('#mandalaBase',{rotate:360,duration:90,repeat:-1,ease:'none',transformOrigin:'50% 50%'});
+  gsap.to('#mandalaPlate',{rotate:-360,duration:40,repeat:-1,ease:'none',transformOrigin:'50% 50%'});
+  gsap.to('.hero-art',{yPercent:12,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+
+  /* ribbon drift */
+  gsap.to('#ribbonTrack',{xPercent:-33.33,duration:22,repeat:-1,ease:'none'});
+
+  /* generic section reveals */
+  gsap.utils.toArray('.story-tell .st-intro .eyebrow,.story-tell .st-intro h2,.story-tell .st-lead,.story-tell .st-values .eyebrow,.products .top,.quality h2,.contact h2,.contact-lead,.contact-cards,.qr-note').forEach(el=>{
+    gsap.from(el,{y:46,opacity:0,duration:.85,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 86%'}});
+  });
+
+  /* storytelling timeline: portrait fades in, story beats reveal one after another */
+  gsap.from('.st-portrait',{y:30,opacity:0,duration:.9,ease:'power3.out',scrollTrigger:{trigger:'.st-grid',start:'top 80%'}});
+  gsap.utils.toArray('.beat').forEach(b=>{
+    gsap.from(b,{y:40,opacity:0,duration:.7,ease:'power3.out',scrollTrigger:{trigger:b,start:'top 85%'}});
+  });
+  gsap.utils.toArray('.st-values .card-v').forEach((c,i)=>{
+    gsap.from(c,{y:40,opacity:0,duration:.7,delay:i*.08,ease:'power3.out',scrollTrigger:{trigger:'.st-values .vmp',start:'top 84%'}});
+  });
+
+  /* counters */
+  document.querySelectorAll('[data-count]').forEach(el=>{
+    const end=+el.dataset.count, suf=el.dataset.suffix||'';
+    ScrollTrigger.create({trigger:el,start:'top 88%',once:true,onEnter:()=>{
+      gsap.fromTo(el,{innerText:0},{innerText:end,duration:1.6,ease:'power1.out',snap:{innerText:1},
+        onUpdate(){ el.textContent=Math.round(el.innerText)+suf; }});
+    }});
+  });
+
+  /* story deck — the section pins and the stage cards advance as you scroll through it. */
+  const story=$('#story');
+  const cards=gsap.utils.toArray('#storyStage .scard');
+  const railBtns=gsap.utils.toArray('#storyRail button');
+  if(cards.length>1 && window.ScrollTrigger && !reduced && window.matchMedia('(min-width:861px)').matches){
+    const n=cards.length;
+    story.classList.add('anim');                 /* stack cards absolutely for the swap */
+    const setActive=k=>railBtns.forEach((b,i)=>b.classList.toggle('active',i===k));
+    gsap.set(cards,{autoAlpha:0,yPercent:8});
+    gsap.set(cards[0],{autoAlpha:1,yPercent:0});
+    setActive(0);
+
+    const tl=gsap.timeline({scrollTrigger:{
+      trigger:story,start:'center center',end:()=>'+='+((n-1)*window.innerHeight*0.9),
+      pin:true,pinSpacing:true,anticipatePin:1,scrub:.6,invalidateOnRefresh:true,
+      snap:{snapTo:1/(n-1),duration:{min:.15,max:.35},delay:.04,ease:'power1.inOut'},
+      onUpdate(self){ setActive(Math.round(self.progress*(n-1))); }
+    }});
+    for(let i=1;i<n;i++){
+      tl.to(cards[i-1],{autoAlpha:0,yPercent:-8,duration:1,ease:'none'}, i-1)
+        .fromTo(cards[i],{autoAlpha:0,yPercent:8},{autoAlpha:1,yPercent:0,duration:1,ease:'none'}, i-1);
+    }
+
+    /* rail labels jump to their card */
+    railBtns.forEach(b=>b.addEventListener('click',()=>{
+      const st=tl.scrollTrigger, i=+b.dataset.i;
+      window.scrollTo({top:st.start+(st.end-st.start)*(i/(n-1)), behavior:'smooth'});
+    }));
+  } else if(cards.length){
+    /* reduced-motion / small screens: no scroll-jacking — show all stages in flow */
+    railBtns.forEach((b,i)=>b.classList.toggle('active',i===0));
+  }
+
+  /* quality drawn line */
+  const draw=$('#qPathDraw'), col=document.querySelector('.q-linecol');
+  function sizeLine(){ const h=document.querySelector('.q-steps').offsetHeight; col.style.height=h+'px';
+    draw.setAttribute('d',`M32 0 V1000`); const len=draw.getTotalLength();
+    draw.style.strokeDasharray=len; draw.style.strokeDashoffset=len; }
+  sizeLine(); window.addEventListener('resize',sizeLine);
+  gsap.to(draw,{strokeDashoffset:0,ease:'none',scrollTrigger:{trigger:'.q-grid',start:'top 70%',end:'bottom 60%',scrub:true}});
+  gsap.utils.toArray('.q-step').forEach(s=>{
+    gsap.from(s,{x:40,opacity:0,duration:.8,ease:'power3.out',scrollTrigger:{trigger:s,start:'top 84%'}});
+  });
+
+  /* nav state */
+  ScrollTrigger.create({start:60,onUpdate(self){ $('#nav').classList.toggle('scrolled',self.scroll()>60); },
+    onToggle(){ $('#nav').classList.toggle('scrolled',window.scrollY>60); }});
+
+  /* recalc every trigger AFTER the pin + dynamic content exist, so the pin's spacer
+     doesn't leave later sections (about, products, quality, contact) stuck at opacity:0 */
+  ScrollTrigger.refresh();
+  window.addEventListener('load',()=>ScrollTrigger.refresh());
+  requestAnimationFrame(()=>ScrollTrigger.refresh());
+});
+
+/* nav fallbacks + burger */
+window.addEventListener('scroll',()=>{ $('#nav').classList.toggle('scrolled',window.scrollY>60); },{passive:true});
+$('#burger').addEventListener('click',()=> $('#navLinks').classList.toggle('open'));
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=> $('#navLinks').classList.remove('open')));
+$('#navTrace').addEventListener('click',e=>{ setTimeout(()=> $('#batchInput').focus({preventScroll:false}),500); });
+
+/* ============ TRACE / certificate ============ */
+const sealSVG = `
+<svg class="seal" viewBox="0 0 120 120" aria-hidden="true">
+  <circle cx="60" cy="60" r="55" fill="none" stroke="#9c2c11" stroke-width="3" class="seal-c"/>
+  <circle cx="60" cy="60" r="44" fill="none" stroke="#9c2c11" stroke-width="1.2" stroke-dasharray="3 3"/>
+  <path id="sealArc" d="M60 14 a46 46 0 1 1 -0.01 0" fill="none"/>
+  <text font-size="10.5" letter-spacing="2.5" fill="#9c2c11" font-family="IBM Plex Mono,monospace">
+    <textPath href="#sealArc" startOffset="2%">RUSIYAA · BATCH VERIFIED · RUSIYAA ·</textPath>
+  </text>
+  <path class="seal-tick" d="M40 62 L54 76 L82 46" fill="none" stroke="#5e7348" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`;
+
+function showCertificate(batch){
+  const body=$('#certBody');
+  if(!batch){
+    body.innerHTML=`
+      <div class="cert-band"><img src="assets/images/header_logo .png" alt="RUSIYAA"><span class="mono">Authenticity Check</span></div>
+      <div class="cert-body">
+        <div class="notfound">
+          <div class="glyph">🔍</div>
+          <h3>Product Not Verified</h3>
+          <span class="result-fail">RESULT: NOT VERIFIED ✕</span>
+          <p>This batch code doesn't match our register. Check the code printed near the seal of your pack — and if it still fails, <b>contact us immediately</b>: it may not be a genuine RUSIYAA product.</p>
+          <p style="margin-top:1rem"><a class="btn btn-chilli" href="#contact" onclick="closeOverlay('traceOverlay')">Report this pack</a></p>
+        </div>
+      </div>`;
+  } else {
+    body.innerHTML=`
+      <div class="cert-band"><img src="assets/images/header_logo .png" alt="RUSIYAA"><span class="mono">Certificate of Authenticity</span></div>
+      <div class="cert-body">
+        <h3>${batch.product}</h3>
+        <span class="batchno">${batch.no}</span><br>
+        <span class="result-pass">✓ GENUINE PRODUCT</span>
+        <div class="cert-grid">
+          <div class="cert-cell"><small>Batch ID</small><div class="v">${batch.no}</div></div>
+          <div class="cert-cell"><small>SKU ID</small><div class="v">${batch.sku}</div></div>
+          <div class="cert-cell"><small>Manufactured</small><div class="v">${batch.mfg}</div></div>
+          <div class="cert-cell"><small>Best before</small><div class="v">${batch.exp}</div></div>
+          <div class="cert-cell full"><small>Manufacturer details</small><div class="v">${batch.mfr}</div></div>
+          <div class="cert-cell full"><small>FSSAI License No</small><div class="v">${batch.fssai}</div></div>
+        </div>
+        <p class="cert-foot">This record is generated from the RUSIYAA register. If anything on your pack doesn't match this result, please contact us.</p>
+      </div>
+      ${sealSVG}`;
+    if(!reduced){
+      const tick=body.querySelector('.seal-tick'); const len=tick.getTotalLength();
+      tick.style.strokeDasharray=len; tick.style.strokeDashoffset=len;
+      gsap.timeline()
+        .from(body.querySelector('.seal'),{scale:1.7,opacity:0,rotate:6,duration:.5,ease:'power4.in'})
+        .to(tick,{strokeDashoffset:0,duration:.5,ease:'power2.out'})
+        .from(body.querySelectorAll('.cert-cell'),{x:-16,opacity:0,stagger:.08,duration:.4},0.1);
+    }
+  }
+  openOverlay('traceOverlay');
+}
+/* --- live mode: certificate built dynamically from the sheet's columns --- */
+function showLoadingCert(no){
+  $('#certBody').innerHTML = `
+    <div class="cert-band"><img src="assets/images/header_logo .png" alt="RUSIYAA"><span class="mono">Authenticity Check</span></div>
+    <div class="cert-body">
+      <h3>Checking ${no}…</h3>
+      <p style="color:rgba(28,14,7,.55);font-size:.9rem;margin-top:.4rem">Verifying against the RUSIYAA register</p>
+    </div>`;
+  openOverlay('traceOverlay');
+}
+function showSheetCertificate(data){
+  const entries = Object.entries(data).filter(([k,v])=>!k.startsWith('_') && String(v).trim()!=='');
+  const batchKey = entries[0];                                            // first column = batch id
+  const prodEntry = entries.find(([k])=>k.toLowerCase().includes('product'));
+  const rest = entries.filter(en=>en!==batchKey && en!==prodEntry);
+  /* a cell is full-width if its value is long; also promote any half-width cell that
+     would otherwise sit alone in a row (no right-hand partner) so the 2-col grid never
+     leaves an empty trailing box. */
+  const cells = rest.map(([k,v])=>({k,v,full:String(v).length>26}));
+  let col=0;
+  cells.forEach((c,i)=>{
+    if(c.full){ col=0; return; }
+    const next=cells[i+1];
+    if(col===0){ if(!next || next.full){ c.full=true; } else { col=1; } }
+    else { col=0; }
+  });
+  $('#certBody').innerHTML = `
+    <div class="cert-band"><img src="assets/images/header_logo .png" alt="RUSIYAA"><span class="mono">Certificate of Authenticity</span></div>
+    <div class="cert-body">
+      <h3>${prodEntry ? prodEntry[1] : 'RUSIYAA Masala'}</h3>
+      <span class="batchno">${batchKey[1]}</span><br>
+      <span class="result-pass">✓ GENUINE PRODUCT</span>
+      <div class="cert-grid">
+        ${cells.map(c=>`<div class="cert-cell ${c.full?'full':''}"><small>${c.k}</small><div class="v">${c.v}</div></div>`).join('')}
+      </div>
+      <p class="cert-foot">This record was read live from the RUSIYAA register. If anything on your pack doesn't match this certificate, please contact us.</p>
+    </div>
+    ${sealSVG}`;
+  if(!reduced){
+    const tick=$('#certBody').querySelector('.seal-tick'); const len=tick.getTotalLength();
+    tick.style.strokeDasharray=len; tick.style.strokeDashoffset=len;
+    gsap.timeline()
+      .from($('#certBody').querySelector('.seal'),{scale:1.7,opacity:0,rotate:6,duration:.5,ease:'power4.in'})
+      .to(tick,{strokeDashoffset:0,duration:.5,ease:'power2.out'})
+      .from($('#certBody').querySelectorAll('.cert-cell'),{y:14,opacity:0,stagger:.06,duration:.4},0.1);
+  }
+  openOverlay('traceOverlay');
+}
+async function traceBatch(no){
+  const clean=(no||'').trim().toUpperCase();
+  if(!clean) return;
+  if(!live()){ showCertificate(batches.find(b=>b.no.toUpperCase()===clean)); return; }
+  showLoadingCert(clean);
+  try{
+    const r = await fetch(`${SCRIPT_URL}?action=trace&batch=${encodeURIComponent(clean)}`);
+    const j = await r.json();
+    if(j.found) showSheetCertificate(j.data); else showCertificate(null);
+  }catch(err){
+    $('#certBody').innerHTML = `
+      <div class="cert-head"><span class="mono">BATCH LOOKUP</span></div>
+      <div class="notfound"><div class="glyph">📡</div><h3>Couldn't reach the register</h3>
+      <p>The verification service didn't respond. Check your internet connection and try again in a moment.</p></div>`;
+  }
+}
+$('#traceForm').addEventListener('submit',e=>{ e.preventDefault(); traceBatch($('#batchInput').value); });
+document.querySelector('[data-sample]').addEventListener('click',e=>{ $('#batchInput').value=e.target.dataset.sample; traceBatch(e.target.dataset.sample); });
+/* QR deep-link simulation: #trace=RSY-2605-A12 opens the certificate once.
+   Clear the hash afterwards so a normal reload doesn't re-open the cert. */
+window.addEventListener('load',()=>{
+  const m=location.hash.match(/trace=([\w-]+)/i);
+  if(m){
+    history.replaceState(null,'',location.pathname+location.search);
+    $('#batchInput').value=m[1];
+    traceBatch(m[1]);
+  }
+});
+
+/* ============ CONTACT → WhatsApp ============ */
+const WA_NUMBER = "919941402534"; // +91 99414 02534 — RUSIYAA WhatsApp
+function openWhatsApp(text){ window.open('https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(text),'_blank','noopener'); }
+$('#contactForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const [name,contact]=[...e.target.querySelectorAll('input')].map(i=>i.value.trim());
+  const msg=e.target.querySelector('textarea').value.trim();
+  openWhatsApp(`Hello RUSIYAA,\n\nName: ${name}\nEmail / phone: ${contact}\n\n${msg}`);
+  $('#contactOk').style.display='block'; e.target.reset(); toast('Opening WhatsApp…');
+});
+
+/* ============ NEWSLETTER → WhatsApp ============ */
+$('#newsForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const email=e.target.querySelector('input').value.trim();
+  openWhatsApp(`Hi RUSIYAA, please add me to your newsletter.\nEmail: ${email}`);
+  $('#newsOk').style.display='block'; e.target.reset(); toast('Opening WhatsApp…');
+});
+
+</script>
+</body>
+</html>
+
