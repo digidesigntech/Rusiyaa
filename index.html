@@ -249,6 +249,15 @@ input,select,textarea{font-family:inherit}
 .price{font-family:var(--mono);font-weight:600;font-size:.82rem;color:var(--ink);letter-spacing:.02em}
 .heat{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(28,14,7,.5)}
 .heat .on{color:var(--chilli)}
+/* coming-soon teaser card */
+.card.soon{border-style:dashed;border-color:rgba(199,154,75,.6)}
+.card.soon .pack{background:radial-gradient(circle at 50% 38%,#4a1c0c,#1c0e07);border-bottom-color:rgba(199,154,75,.22)}
+.card.soon .ptag{color:#f2c279;background:rgba(28,14,7,.5);border-color:rgba(199,154,75,.5)}
+.card.soon .soon-glyph{position:relative;z-index:1;font-size:3.4rem;color:#f2c279;filter:drop-shadow(0 8px 18px rgba(0,0,0,.5));animation:soonPulse 2.8s ease-in-out infinite}
+@keyframes soonPulse{0%,100%{opacity:.55;transform:scale(1)}50%{opacity:1;transform:scale(1.1)}}
+.soon-link{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--chilli-deep);font-weight:600;text-decoration:none;transition:color .25s ease}
+.soon-link:hover{color:var(--chilli)}
+@media(prefers-reduced-motion:reduce){.card.soon .soon-glyph{animation:none}}
 
 /* ---------- quality ---------- */
 .quality{position:relative;color:var(--cream);
@@ -297,9 +306,10 @@ input,select,textarea{font-family:inherit}
   padding:1rem 1.15rem;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease,background .3s ease}
 a.ccard:hover{transform:translateY(-3px);background:rgba(255,255,255,.55);border-color:rgba(255,255,255,.85);
   box-shadow:0 18px 40px rgba(28,14,7,.14),inset 0 1px 0 rgba(255,255,255,.75)}
-.ccard-ic{flex:0 0 auto;width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:1.2rem;
+.ccard-ic{flex:0 0 auto;width:42px;height:42px;border-radius:12px;display:grid;place-items:center;
   background:linear-gradient(150deg,rgba(233,161,59,.3),rgba(199,62,29,.18));border:1px solid rgba(255,255,255,.5);
   box-shadow:inset 0 1px 0 rgba(255,255,255,.5)}
+.ccard-ic svg{width:20px;height:20px;stroke:var(--chilli-deep);stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
 .ccard-tx{display:flex;flex-direction:column;gap:.18rem;min-width:0}
 .ccard-tx small{font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--chilli-deep)}
 .ccard-tx b{font-weight:600;font-size:.95rem;line-height:1.4;word-break:break-word}
@@ -400,36 +410,43 @@ footer .wrap{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wra
 /* closing values */
 .st-values{position:relative;z-index:0;margin-top:clamp(3rem,6vw,5rem);padding:clamp(3rem,5vw,4.5rem) 0}
 .st-values::before{content:"";position:absolute;top:0;bottom:-7.5rem;left:50%;transform:translateX(-50%);width:100vw;z-index:-1;
-  background:url("assets/images/3 background.png") center/cover no-repeat;
-  -webkit-mask:linear-gradient(to bottom, transparent 0, #000 160px);
-          mask:linear-gradient(to bottom, transparent 0, #000 160px)}
+  background:url("assets/images/3 background.png") center/cover no-repeat;opacity:.4;
+  -webkit-mask:linear-gradient(to bottom, transparent 0, #000 160px, #000 calc(100% - 200px), transparent 100%);
+          mask:linear-gradient(to bottom, transparent 0, #000 160px, #000 calc(100% - 200px), transparent 100%)}
 .st-values .eyebrow{margin-bottom:1.8rem}
 
 /* ---------- vision / mission / promise ---------- */
 .vmp{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:1rem}
-.card-v{position:relative;overflow:hidden;border-radius:18px;padding:2.2rem 1.8rem 1.9rem;color:var(--cream);
-  border:1px solid rgba(199,154,75,.32);
-  background:linear-gradient(rgba(26,8,10,.62),rgba(26,8,10,.76)),url("assets/images/hero_background.png") center/cover;
-  box-shadow:0 18px 44px rgba(28,14,7,.28);transition:transform .3s ease,box-shadow .3s ease}
-.card-v:hover{transform:translateY(-5px);box-shadow:0 28px 56px rgba(28,14,7,.45)}
-.card-v::before{content:"";position:absolute;left:0;top:0;width:100%;height:4px}
-.card-v::after{position:absolute;top:1.05rem;right:1.5rem;font-family:var(--disp);font-size:2.6rem;line-height:1;opacity:.42}
-.card-v .tag{font-family:var(--mono);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase}
-.card-v h3{font-family:var(--disp);font-size:1.3rem;margin:.7rem 0 .6rem;color:var(--cream)}
-.card-v p{color:rgba(244,232,210,.82);font-weight:300;font-size:.95rem}
+.card-v{position:relative;overflow:hidden;border-radius:20px;padding:2.6rem 2.05rem 2.2rem;color:var(--cream);
+  border:1px solid rgba(199,154,75,.3);
+  background:linear-gradient(rgba(20,6,8,.66),rgba(20,6,8,.82)),url("assets/images/hero_background.png") center/cover;
+  box-shadow:0 18px 44px rgba(28,14,7,.34),inset 0 1px 0 rgba(255,236,200,.1);
+  transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s ease,border-color .45s ease}
+.card-v:hover{transform:translateY(-6px);border-color:rgba(199,154,75,.6);
+  box-shadow:0 34px 66px rgba(28,14,7,.52),inset 0 1px 0 rgba(255,236,200,.18)}
+/* refined top accent — a soft gradient hairline, not a flat bar */
+.card-v::before{content:"";position:absolute;left:0;top:0;width:100%;height:3px;opacity:.95}
+/* faint inner sheen in the top-right where the number used to sit */
+.card-v::after{content:"";position:absolute;top:-30%;right:-20%;width:55%;height:60%;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,236,200,.12),transparent 70%);pointer-events:none}
+.card-v .tag{display:inline-block;font-family:var(--mono);font-size:.64rem;letter-spacing:.26em;text-transform:uppercase}
+.card-v .tag::before{content:"";display:inline-block;width:18px;height:1px;background:currentColor;vertical-align:middle;margin-right:.55rem;opacity:.75}
+.card-v h3{position:relative;font-family:var(--disp);font-size:1.45rem;margin:1rem 0 .95rem;padding-bottom:.9rem;color:var(--cream);letter-spacing:.01em}
+.card-v h3::after{content:"";position:absolute;left:0;bottom:0;width:40px;height:2px;background:linear-gradient(90deg,currentColor,transparent);opacity:.55}
+.card-v p{color:rgba(244,232,210,.85);font-weight:300;font-size:.95rem;line-height:1.72}
 /* tri-tone identity over the maroon photo — light, readable accents */
-.card-v:nth-child(1){background:radial-gradient(130% 75% at 50% -15%, rgba(233,161,59,.3), transparent 60%),linear-gradient(rgba(26,8,10,.6),rgba(26,8,10,.76)),url("assets/images/hero_background.png") center/cover}
-.card-v:nth-child(1)::before{background:var(--turmeric)}
-.card-v:nth-child(1)::after{content:"01";color:var(--turmeric-soft)}
+.card-v:nth-child(1){background:radial-gradient(130% 75% at 50% -15%, rgba(233,161,59,.32), transparent 60%),linear-gradient(rgba(20,6,8,.64),rgba(20,6,8,.82)),url("assets/images/hero_background.png") center/cover}
+.card-v:nth-child(1)::before{background:linear-gradient(90deg,var(--turmeric),rgba(233,161,59,0))}
 .card-v:nth-child(1) .tag{color:var(--turmeric-soft)}
-.card-v:nth-child(2){background:radial-gradient(130% 75% at 50% -15%, rgba(199,62,29,.34), transparent 60%),linear-gradient(rgba(26,8,10,.6),rgba(26,8,10,.76)),url("assets/images/hero_background.png") center/cover}
-.card-v:nth-child(2)::before{background:var(--chilli)}
-.card-v:nth-child(2)::after{content:"02";color:#ff9d7e}
+.card-v:nth-child(1) h3::after{color:var(--turmeric)}
+.card-v:nth-child(2){background:radial-gradient(130% 75% at 50% -15%, rgba(199,62,29,.36), transparent 60%),linear-gradient(rgba(20,6,8,.64),rgba(20,6,8,.82)),url("assets/images/hero_background.png") center/cover}
+.card-v:nth-child(2)::before{background:linear-gradient(90deg,var(--chilli),rgba(199,62,29,0))}
 .card-v:nth-child(2) .tag{color:#ff9d7e}
-.card-v:nth-child(3){background:radial-gradient(130% 75% at 50% -15%, rgba(107,127,79,.42), transparent 60%),linear-gradient(rgba(26,8,10,.6),rgba(26,8,10,.76)),url("assets/images/hero_background.png") center/cover}
-.card-v:nth-child(3)::before{background:var(--leaf)}
-.card-v:nth-child(3)::after{content:"03";color:#b6c896}
+.card-v:nth-child(2) h3::after{color:#ff9d7e}
+.card-v:nth-child(3){background:radial-gradient(130% 75% at 50% -15%, rgba(107,127,79,.44), transparent 60%),linear-gradient(rgba(20,6,8,.64),rgba(20,6,8,.82)),url("assets/images/hero_background.png") center/cover}
+.card-v:nth-child(3)::before{background:linear-gradient(90deg,var(--leaf),rgba(107,127,79,0))}
 .card-v:nth-child(3) .tag{color:#b6c896}
+.card-v:nth-child(3) h3::after{color:#b6c896}
 
 /* ---------- newsletter ---------- */
 .newsletter{background:var(--brand-deep);color:var(--cream)}
@@ -587,16 +604,16 @@ body.menu-lock{overflow:hidden}
   <div class="wrap">
     <div class="hero-copy">
       <div class="eyebrow">A brand of Arul's Foods · Chennai</div>
-      <h1 class="h-disp">Spice you can <span class="accent-i">trace</span> back to its batch.</h1>
-      <p class="lead">Authentic spices and masalas — sourced from FSSAI-licensed makers and repacked fresh under the RUSIYAA brand. Every pack carries a batch code that opens its full authenticity record.</p>
+      <h1 class="h-disp">Essentials you can <span class="accent-i">trace</span> back to its source.</h1>
+      <p class="lead">Trusted food and everyday essentials for modern homes. RUSIYAA by Arul's Foods delivers authentic, high-quality products with complete transparency and traceability. Every product is carefully sourced, packed hygienically, and backed by strict quality standards.</p>
 
       <div class="hero-hook" id="trace">
         <label for="batchInput">Verify your pack — enter batch number</label>
         <form class="trace-form" id="traceForm">
-          <input id="batchInput" placeholder="e.g. RSY-2605-A12" autocomplete="off" aria-label="Batch number">
+          <input id="batchInput" placeholder="e.g. RUSCP50001" autocomplete="off" aria-label="Batch number">
           <button class="btn btn-chilli" type="submit">Trace it →</button>
         </form>
-        <p class="hint">Scanned the QR on your pack? You land here automatically. Try a sample: <button type="button" data-sample="RSY-2605-A12">RSY-2605-A12</button></p>
+        <p class="hint">Scanned the QR on your pack? You land here automatically. Try a sample: <button type="button" data-sample="RUSCP50001">RUSCP50001</button></p>
       </div>
 
       <div class="hero-badges">
@@ -689,9 +706,9 @@ body.menu-lock{overflow:hidden}
         <p>To create a brand that combines traditional values, modern convenience and an excellent customer experience, while consistently delivering products that families can trust.</p>
       </div>
       <div class="card-v">
-        <span class="tag">Quality &amp; FSSAI</span>
-        <h3>Quality at the heart</h3>
-        <p>We source from FSSAI-licensed partners and adhere to applicable FSSAI guidelines for quality, safety and labelling — so every product meets our standards before reaching you.</p>
+        <span class="tag">Brand Promise</span>
+        <h3>Quality you can trust</h3>
+        <p>Every RUSIYAA product is sourced responsibly, packed hygienically and delivered with complete transparency — so families always get authentic, high-quality essentials they can rely on.</p>
       </div>
     </div>
   </div>
@@ -770,7 +787,7 @@ body.menu-lock{overflow:hidden}
 
     <div class="q-counters">
       <div class="q-counter"><div class="num" data-count="100" data-suffix="%">0</div><small>Sourced from FSSAI-licensed partners</small></div>
-      <div class="q-counter"><div class="num" data-count="0">0</div><small>Added colours or fillers</small></div>
+      <div class="q-counter"><div class="num" data-count="100" data-suffix="%">0</div><small>Hygienically packed &amp; sealed</small></div>
       <div class="q-counter"><div class="num" data-count="100" data-suffix="%">0</div><small>Batches traceable online</small></div>
     </div>
 
@@ -790,16 +807,16 @@ body.menu-lock{overflow:hidden}
       <p class="contact-lead">Distributor, wholesale and retailer enquiries, or a question about a pack you traced — write to us and our team will be happy to help.</p>
 
       <div class="contact-cards">
-        <div class="ccard">
-          <span class="ccard-ic" aria-hidden="true">📍</span>
+        <a class="ccard" href="https://www.google.com/maps/search/?api=1&amp;query=Arul%27s+Foods%2C+Subhiksham+Building%2C+Thiruvallur+Street%2C+Kodambakkam%2C+Chennai+600024" target="_blank" rel="noopener">
+          <span class="ccard-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
           <span class="ccard-tx"><small>Arul's Foods</small><b>Subhiksham Building, N. No: 5A, 5B &amp; 5C (O. No: 3A, 3B &amp; 3C), Thiruvallur Street, Kodambakkam, Chennai – 600024</b></span>
-        </div>
+        </a>
         <a class="ccard" href="tel:+919941402534">
-          <span class="ccard-ic" aria-hidden="true">📞</span>
+          <span class="ccard-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5l1.5-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 5.5a2 2 0 0 1 2-2Z"/></svg></span>
           <span class="ccard-tx"><small>Call us</small><b>+91 99414 02534</b></span>
         </a>
         <a class="ccard" href="mailto:customercare.ruisyaa@arulsfoods.com">
-          <span class="ccard-ic" aria-hidden="true">✉️</span>
+          <span class="ccard-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg></span>
           <span class="ccard-tx"><small>Email</small><b>customercare.ruisyaa@arulsfoods.com</b></span>
         </a>
       </div>
@@ -809,7 +826,7 @@ body.menu-lock{overflow:hidden}
     <form class="cform" id="contactForm">
       <div class="cform-head">
         <h3>Send a message</h3>
-        <p>Replies usually within a business day — straight to our WhatsApp.</p>
+        <p>Replies usually within a business day — straight to our team.</p>
       </div>
       <div class="field">
         <input required id="cf-name" placeholder=" " aria-label="Your name">
@@ -823,8 +840,8 @@ body.menu-lock{overflow:hidden}
         <textarea required id="cf-msg" placeholder=" " aria-label="Your message"></textarea>
         <label for="cf-msg">Your message</label>
       </div>
-      <button class="btn btn-chilli cform-btn" type="submit">Send via WhatsApp</button>
-      <p class="ok" id="contactOk">✓ Opening WhatsApp — just tap send to reach us.</p>
+      <button class="btn btn-chilli cform-btn" type="submit">Send message</button>
+      <p class="ok" id="contactOk">✓ Message sent — we'll reply within a business day.</p>
     </form>
   </div>
 </section>
@@ -839,7 +856,7 @@ body.menu-lock{overflow:hidden}
       <input type="email" required placeholder="Enter your email" aria-label="Email address">
       <button class="btn btn-chilli" type="submit">Subscribe</button>
     </form>
-    <p class="news-ok" id="newsOk">✓ Opening WhatsApp — tap send and we'll add you.</p>
+    <p class="news-ok" id="newsOk">✓ Thanks — you're on the list.</p>
   </div>
 </section>
 
@@ -886,9 +903,9 @@ let products = [
 ];
 
 let batches = [
-  {no:"RSY-2605-A12", product:"Garam Masala 100g", sku:"RSY-GM-100", mfr:"Repacked & marketed by Arul's Foods · Sourced from an FSSAI-licensed manufacturing partner", fssai:"FSSAI Lic. No. 1XXXXXXXXXXXX", mfg:"02 May 2026", exp:"01 May 2027"},
-  {no:"RSY-2604-C04", product:"Chilli Powder 200g", sku:"RSY-CP-200", mfr:"Repacked & marketed by Arul's Foods · Sourced from an FSSAI-licensed manufacturing partner", fssai:"FSSAI Lic. No. 1XXXXXXXXXXXX", mfg:"18 Apr 2026", exp:"17 Apr 2027"},
-  {no:"RSY-2603-T18", product:"Turmeric Powder 200g", sku:"RSY-TP-200", mfr:"Repacked & marketed by Arul's Foods · Sourced from an FSSAI-licensed manufacturing partner", fssai:"FSSAI Lic. No. 1XXXXXXXXXXXX", mfg:"22 Mar 2026", exp:"21 Mar 2027"},
+  {no:"RUSCP50001", product:"Chilli Powder 50g", sku:"RSY-CP-050", mfr:"Repacked & marketed by Arul's Foods · Sourced from an FSSAI-licensed manufacturing partner", fssai:"FSSAI Lic. No. 1XXXXXXXXXXXX", mfg:"02 May 2026", exp:"01 May 2027"},
+  {no:"RUSGM10002", product:"Garam Masala 100g", sku:"RSY-GM-100", mfr:"Repacked & marketed by Arul's Foods · Sourced from an FSSAI-licensed manufacturing partner", fssai:"FSSAI Lic. No. 1XXXXXXXXXXXX", mfg:"18 Apr 2026", exp:"17 Apr 2027"},
+  {no:"RUSTU20003", product:"Turmeric Powder 200g", sku:"RSY-TP-200", mfr:"Repacked & marketed by Arul's Foods · Sourced from an FSSAI-licensed manufacturing partner", fssai:"FSSAI Lic. No. 1XXXXXXXXXXXX", mfg:"22 Mar 2026", exp:"21 Mar 2027"},
 ];
 
 /* =====================================================
@@ -930,7 +947,18 @@ function renderProducts(){
         <p>${p.desc}</p>
         <div class="card-meta"><span class="price">${p.price}</span><span class="heat">${heatDots(p.heat)}</span></div>
       </div>
-    </article>`).join('');
+    </article>`).join('') + `
+    <article class="card soon" data-anim>
+      <div class="pack">
+        <span class="ptag">Coming soon</span>
+        <span class="soon-glyph">✦</span>
+      </div>
+      <div class="card-body">
+        <h3>Something new is brewing</h3>
+        <p>A new RUSIYAA essential is on its way — same trusted sourcing, same traceable quality. Be the first to know when it lands.</p>
+        <div class="card-meta"><span class="price">Launching soon</span><a class="soon-link" href="#newsletter">Notify me →</a></div>
+      </div>
+    </article>`;
   if(window.ScrollTrigger && !reduced){
     gsap.utils.toArray('#productGrid .card').forEach((c,i)=>{
       gsap.from(c,{y:60,opacity:0,rotate:i%2?1.5:-1.5,duration:.8,ease:'power3.out',
@@ -1259,7 +1287,7 @@ async function traceBatch(no){
 }
 $('#traceForm').addEventListener('submit',e=>{ e.preventDefault(); traceBatch($('#batchInput').value); });
 document.querySelector('[data-sample]').addEventListener('click',e=>{ $('#batchInput').value=e.target.dataset.sample; traceBatch(e.target.dataset.sample); });
-/* QR deep-link simulation: #trace=RSY-2605-A12 opens the certificate once.
+/* QR deep-link simulation: #trace=RUSCP50001 opens the certificate once.
    Clear the hash afterwards so a normal reload doesn't re-open the cert. */
 window.addEventListener('load',()=>{
   const m=location.hash.match(/trace=([\w-]+)/i);
@@ -1270,23 +1298,31 @@ window.addEventListener('load',()=>{
   }
 });
 
-/* ============ CONTACT → WhatsApp ============ */
-const WA_NUMBER = "919941402534"; // +91 99414 02534 — RUSIYAA WhatsApp
-function openWhatsApp(text){ window.open('https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(text),'_blank','noopener'); }
+/* ============ CONTACT + NEWSLETTER → Google Sheet ============ */
+/* Fire-and-forget save to the Google Sheet backend.
+   text/plain keeps it a "simple request" so the browser skips the CORS
+   preflight that Apps Script can't answer; no-cors = we don't read a response. */
+function sendToSheet(payload){
+  if(!live()) return;
+  try{
+    fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload)});
+  }catch(err){ /* never block the user on a logging failure */ }
+}
+
 $('#contactForm').addEventListener('submit',e=>{
   e.preventDefault();
   const [name,contact]=[...e.target.querySelectorAll('input')].map(i=>i.value.trim());
   const msg=e.target.querySelector('textarea').value.trim();
-  openWhatsApp(`Hello RUSIYAA,\n\nName: ${name}\nEmail / phone: ${contact}\n\n${msg}`);
-  $('#contactOk').style.display='block'; e.target.reset(); toast('Opening WhatsApp…');
+  sendToSheet({action:'message', name, contact, message:msg});   // → "message" tab
+  $('#contactOk').style.display='block'; e.target.reset(); toast('Message sent…');
 });
 
-/* ============ NEWSLETTER → WhatsApp ============ */
+/* ============ NEWSLETTER → Google Sheet ============ */
 $('#newsForm').addEventListener('submit',e=>{
   e.preventDefault();
   const email=e.target.querySelector('input').value.trim();
-  openWhatsApp(`Hi RUSIYAA, please add me to your newsletter.\nEmail: ${email}`);
-  $('#newsOk').style.display='block'; e.target.reset(); toast('Opening WhatsApp…');
+  sendToSheet({action:'subscribe', email});                      // → "Subscribers" tab
+  $('#newsOk').style.display='block'; e.target.reset(); toast('Subscribed…');
 });
 
 </script>

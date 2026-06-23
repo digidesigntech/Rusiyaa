@@ -25,6 +25,8 @@
 const ADMIN_KEY = "CHANGE-ME-rusiyaa-2026";   // <-- your admin password
 const BATCH_TAB = "Batches";                  // Table 1 (public check)
 const ADMIN_TAB = "Admin Dashboard";          // Table 2 (admin only)
+const MESSAGE_TAB = "message";                // "Send a message" form (tab name is case-sensitive)
+const NEWS_TAB    = "subscribers";            // Newsletter sign-ups (tab name is case-sensitive)
 const SHEET_ID  = "1QEn0VYbT__MAswGKns3AFe2P-Hm-Pl7DZaVf-XvPmDc";
 
 /* ---------- PUBLIC API ----------
@@ -34,6 +36,18 @@ const SHEET_ID  = "1QEn0VYbT__MAswGKns3AFe2P-Hm-Pl7DZaVf-XvPmDc";
 */
 function doGet(e) {
   try {
+    /* ---------- SELF-TEST ----------
+       Open  <your /exec URL>?selftest=1  in a browser.
+       It writes one test row to each tab and reports back, so you can
+       confirm the backend + tab names + permissions all work end-to-end. */
+    if ((e.parameter || {}).selftest) {
+      const m = ensureSheet(MESSAGE_TAB, ["Received", "Name", "Email / Phone", "Message"]);
+      m.appendRow([new Date(), "SELF-TEST", "test@example.com", "Backend self-test row — safe to delete."]);
+      const s = ensureSheet(NEWS_TAB, ["Subscribed", "Email"]);
+      s.appendRow([new Date(), "selftest@example.com"]);
+      return json({ ok: true, wrote: { message: MESSAGE_TAB, subscribers: NEWS_TAB } });
+    }
+
     const q = String((e.parameter || {}).batch || "").trim().toUpperCase();
     if (!q) return json({ found: false, error: "No batch number given" });
     const hit = readRows(BATCH_TAB).find(r => String(firstValue(r)).trim().toUpperCase() === q);
@@ -57,6 +71,24 @@ function doGet(e) {
 function doPost(e) {
   try {
     const b = JSON.parse(e.postData.contents || "{}");
+
+    /* ---------- PUBLIC FORMS (no admin password needed) ----------
+       The website posts these from the contact + newsletter forms.
+       Tabs are created automatically the first time they're used. */
+    if (b.action === "message") {
+      const sh = ensureSheet(MESSAGE_TAB, ["Received", "Name", "Email / Phone", "Message"]);
+      sh.appendRow([new Date(), String(b.name || ""), String(b.contact || ""), String(b.message || "")]);
+      return json({ ok: true });
+    }
+    if (b.action === "subscribe") {
+      const email = String(b.email || "").trim();
+      if (!email) return json({ ok: false, error: "Email is required" });
+      const sh = ensureSheet(NEWS_TAB, ["Subscribed", "Email"]);
+      sh.appendRow([new Date(), email]);
+      return json({ ok: true });
+    }
+
+    /* ---------- ADMIN API (password required from here on) ---------- */
     if (b.secret !== ADMIN_KEY) return json({ ok: false, error: "Wrong admin password" });
 
     if (b.action === "ping") return json({ ok: true });
@@ -106,6 +138,15 @@ function getSheet(name) {
   catch (e) { ss = SpreadsheetApp.getActiveSpreadsheet(); }
   const sh = ss.getSheetByName(name);
   if (!sh) throw new Error('Tab "' + name + '" not found — rename a tab at the bottom of the spreadsheet to exactly "' + name + '"');
+  return sh;
+}
+function ensureSheet(name, headers) {           // get a tab, creating it (with headers) if missing
+  let ss;
+  try { ss = SpreadsheetApp.openById(SHEET_ID); }
+  catch (e) { ss = SpreadsheetApp.getActiveSpreadsheet(); }
+  let sh = ss.getSheetByName(name);
+  if (!sh) { sh = ss.insertSheet(name); }
+  if (sh.getLastRow() === 0) { sh.appendRow(headers); sh.setFrozenRows(1); }
   return sh;
 }
 function readHeaders(name) {
