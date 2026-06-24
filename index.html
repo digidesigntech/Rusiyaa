@@ -29,7 +29,7 @@
   --mono:'IBM Plex Mono',monospace;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:clip}
 body{font-family:var(--body);background:var(--ink);color:var(--cream);line-height:1.6;overflow-x:clip}
 ::selection{background:var(--turmeric);color:var(--ink)}
 img{max-width:100%}
@@ -88,6 +88,8 @@ input,select,textarea{font-family:inherit}
     radial-gradient(900px 700px at -10% 110%, rgba(199,62,29,.20), transparent 60%),
     var(--ink);}
 .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center;padding-top:5.5rem}
+.hero-copy{min-width:0}
+.hero-copy h1,.hero-copy p.lead{overflow-wrap:break-word}
 .hero h1{font-size:clamp(2rem,4.1vw,3.35rem);margin:1.1rem 0 1.15rem;max-width:17ch}
 .hero p.lead{font-size:1rem;max-width:48ch;color:rgba(244,232,210,.82);font-weight:300}
 .hero-hook{margin-top:2.2rem;border-radius:22px;padding:1.7rem 1.8rem;border:1px solid rgba(28,14,7,.12);
@@ -95,7 +97,7 @@ input,select,textarea{font-family:inherit}
   box-shadow:0 24px 60px rgba(28,14,7,.4)}
 .hero-hook label{display:block;font-family:var(--mono);font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:var(--chilli-deep);margin-bottom:.8rem}
 .trace-form{display:flex;gap:.6rem}
-.trace-form input{flex:1;background:rgba(255,252,246,.92);border:1px solid rgba(28,14,7,.16);border-radius:999px;color:var(--ink);font-family:var(--mono);font-size:.95rem;letter-spacing:.08em;padding:.9rem 1.3rem;text-transform:uppercase}
+.trace-form input{flex:1;min-width:0;background:rgba(255,252,246,.92);border:1px solid rgba(28,14,7,.16);border-radius:999px;color:var(--ink);font-family:var(--mono);font-size:.95rem;letter-spacing:.08em;padding:.9rem 1.3rem;text-transform:uppercase}
 .trace-form input::placeholder{color:rgba(28,14,7,.4);text-transform:none;letter-spacing:.02em}
 .hero-hook .hint{margin-top:.7rem;font-size:.8rem;color:rgba(28,14,7,.68)}
 .hero-hook .hint button{background:none;border:none;color:var(--chilli);font-family:var(--mono);font-size:.8rem;text-decoration:underline dotted;padding:0}
@@ -472,6 +474,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wra
 /* ---------- mobile ---------- */
 @media (max-width:920px){
   .hero .wrap{grid-template-columns:1fr;padding-top:8rem}
+  .trace-form{flex-wrap:wrap}
+  .trace-form .btn{flex:1 1 auto}
   .hero-art{order:-1;margin-top:2.5rem}
   .mandala{width:min(280px,62vw)}
   .about .wrap,.contact .wrap,.st-grid{grid-template-columns:1fr;gap:2.6rem}
